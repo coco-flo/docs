@@ -1,64 +1,188 @@
 {
   "$schema": "https://mintlify.com/docs.json",
-  "theme": "mint",
-  "name": "Mintlify Starter Kit",
+  "theme": "sequoia",
+  "name": "Clarely",
+  "description": "Help guides, product documentation, and support resources for Clarely users.",
   "colors": {
-    "primary": "#16A34A",
-    "light": "#07C983",
-    "dark": "#15803D"
-  },
-  "favicon": "/favicon.svg",
-  "navigation": {
-    "pages": ["index", "quickstart"],
-    "global": {
-      "anchors": [
-        {
-          "anchor": "Documentation",
-          "href": "https://mintlify.com/docs",
-          "icon": "book-open-cover"
-        },
-        {
-          "anchor": "Blog",
-          "href": "https://mintlify.com/blog",
-          "icon": "newspaper"
-        }
-      ]
+    "primary": "#0D9488",
+    "light": "#0D9488",
+    "dark": "#0D9488",
+    "background": {
+      "light": "#F0F5F4",
+      "dark": "#0F1F1E"
     }
   },
+  "favicon": "/favicon/clarelyfavicon32px.png",
   "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
+    "light": "/logo/clarelyhorizlight2x.png",
+    "dark": "/logo/clarelyhorizdark2x.png",
+    "href": "https://clarely.co"
+  },
+  "icons": {
+    "library": "lucide"
   },
   "navbar": {
     "links": [
       {
-        "label": "Support",
-        "href": "mailto:hi@mintlify.com"
+        "label": "Back to Clarely",
+        "href": "https://clarely.co"
       }
     ],
     "primary": {
       "type": "button",
-      "label": "Dashboard",
-      "href": "https://dashboard.mintlify.com"
+      "label": "Sign in",
+      "href": "https://clarely.app"
     }
-  },
-  "contextual": {
-    "options": [
-     "copy",
-     "view",
-     "chatgpt",
-     "claude",
-     "perplexity",
-     "mcp",
-     "cursor",
-     "vscode"
-   ]
   },
   "footer": {
-    "socials": {
-      "x": "https://x.com/mintlify",
-      "github": "https://github.com/mintlify",
-      "linkedin": "https://linkedin.com/company/mintlify"
-    }
+    "links": [
+      {
+        "header": "Product",
+        "items": [
+          { "label": "Clarely.co", "href": "https://clarely.co" },
+          { "label": "Sign in", "href": "https://clarely.app" }
+        ]
+      },
+      {
+        "header": "Support",
+        "items": [
+          { "label": "Contact support", "href": "mailto:support@clarely.co" }
+        ]
+      }
+    ]
+  },
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Getting Started",
+        "groups": [
+          {
+            "group": "Welcome",
+            "pages": ["index"]
+          },
+          {
+            "group": "How Clarely works",
+            "pages": [
+              "getting-started/how-clarely-works",
+              "getting-started/pwa-install",
+              "getting-started/your-first-quote"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Quotes",
+        "groups": [
+          {
+            "group": "Overview",
+            "pages": ["quotes/index"]
+          },
+          {
+            "group": "Creating and sending",
+            "pages": [
+              "quotes/create-quote",
+              "quotes/line-items",
+              "quotes/send-to-client"
+            ]
+          },
+          {
+            "group": "Client acceptance",
+            "pages": [
+              "quotes/digital-signature",
+              "quotes/scope-protection",
+              "quotes/acceptance-flow"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Jobs",
+        "groups": [
+          {
+            "group": "Overview",
+            "pages": ["jobs/index"]
+          },
+          {
+            "group": "Managing jobs",
+            "pages": [
+              "jobs/schedule-job",
+              "jobs/job-status",
+              "jobs/recurring-jobs"
+            ]
+          },
+          {
+            "group": "Team",
+            "pages": [
+              "jobs/assign-team-member",
+              "jobs/team-view"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Invoices",
+        "groups": [
+          {
+            "group": "Overview",
+            "pages": ["invoices/index"]
+          },
+          {
+            "group": "Creating and sending",
+            "pages": [
+              "invoices/generate-invoice",
+              "invoices/send-invoice",
+              "invoices/payment-handling"
+            ]
+          },
+          {
+            "group": "Managing invoices",
+            "pages": [
+              "invoices/overdue",
+              "invoices/invoice-status"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Account",
+        "groups": [
+          {
+            "group": "Overview",
+            "pages": ["account/index"]
+          },
+          {
+            "group": "Settings",
+            "pages": [
+              "account/business-settings",
+              "account/team-members",
+              "account/plan-billing"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "FAQ & Troubleshooting",
+        "groups": [
+          {
+            "group": "Common questions",
+            "pages": [
+              "faq/index",
+              "faq/quotes",
+              "faq/jobs",
+              "faq/invoices",
+              "faq/billing"
+            ]
+          },
+          {
+            "group": "Troubleshooting",
+            "pages": [
+              "faq/troubleshooting/client-cant-sign",
+              "faq/troubleshooting/payment-issues",
+              "faq/troubleshooting/pwa-install"
+            ]
+          }
+        ]
+      }
+    ]
   }
 }
