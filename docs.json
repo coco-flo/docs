@@ -6,16 +6,12 @@
   "colors": {
     "primary": "#0D9488",
     "light": "#0D9488",
-    "dark": "#0D9488",
-    "background": {
-      "light": "#F0F5F4",
-      "dark": "#0F1F1E"
-    }
+    "dark": "#0D9488"
   },
-  "favicon": "/favicon/clarelyfavicon32px.png",
+  "favicon": "/favicon.svg",
   "logo": {
-    "light": "/logo/clarelyhorizlight2x.png",
-    "dark": "/logo/clarelyhorizdark2x.png",
+    "light": "/logo/light.svg",
+    "dark": "/logo/dark.svg",
     "href": "https://clarely.co"
   },
   "icons": {
@@ -161,7 +157,7 @@
         ]
       },
       {
-        "tab": "FAQ & Troubleshooting",
+        "tab": "FAQ & Support",
         "groups": [
           {
             "group": "Common questions",
