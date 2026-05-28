@@ -1,31 +1,54 @@
 ---
 title: "Payment handling"
-description: "How payments are collected and processed in Clarely."
+description: "How clients pay through Venmo, Cash App, Zelle, and how to record payments."
 sidebarTitle: "Payment handling"
 ---
 
-Clarely collects payments through Stripe, one of the most widely used payment processors in the world. Your clients pay by card through a secure hosted payment page.
+Clarely is built around the way most small service businesses already collect payment — directly through apps like Venmo, Cash App, and Zelle. There's no card processing, no payment gateway, and no fees taken from your invoices.
 
-## How it works
+## How client payment works
 
-When a client receives an invoice, they click the payment link and enter their card details on a Stripe-hosted page. Stripe processes the payment and notifies Clarely. The invoice status updates to **Paid** automatically.
+When a client receives an invoice, they open it via the link in the email. The invoice shows your total, balance due, and the payment handles you've set up in your account settings. The client pays you directly using whichever method works for them.
 
-## Payout timeline
+Once you've received the payment, you mark the invoice paid in Clarely.
 
-Funds are deposited to your connected bank account on Stripe's standard payout schedule — typically 2 business days after payment is received. Your first payout may take longer while Stripe verifies your account.
+## Setting up your payment handles
 
-## Processing fees
+Go to **Account** → **Business Settings** to add your payment details:
 
-Stripe charges a processing fee on each transaction (2.9% \+ \$0.30 for standard card payments). This fee is deducted from the payment before it reaches your account. Clarely does not add any additional fees on top of Stripe's rates.
+- **Venmo** — your Venmo username (without the @ symbol)
+- **Cash App** — your Cash App cashtag (without the \$ symbol)
+- **Zelle** — your Zelle-registered email or phone number
 
-## Accepted payment methods
+You can set up one, two, or all three. Clients see whichever handles you've configured and choose what works for them.
 
-Clarely supports all major credit and debit cards through Stripe. Additional payment methods (ACH, Apple Pay, Google Pay) may be available depending on your Stripe account configuration.
+You can also add a **Payment notes** field — use this for any additional instructions, like bank transfer details or a note about your preferred method.
 
-## Connecting your bank account
+## What the client sees
 
-Payout destination is configured in your Stripe account. Go to your Stripe dashboard to add or update your bank account for payouts.
+The client opens the invoice link and sees:
 
-## Payment receipts
+- Your business name and logo
+- The invoice total and balance due
+- Your configured payment handles with tap-to-copy buttons
+- Any payment notes you've added
 
-Stripe automatically sends a payment receipt to your client when payment is processed. You don't need to do anything — the receipt goes out immediately after the transaction completes.
+There's no card entry form. Payment happens outside Clarely, through the app or method the client chooses.
+
+## Recording payment
+
+Once a client pays, open the invoice in Clarely and tap **Mark as Paid**. Enter the amount received and the date. Clarely updates the balance and moves the invoice to **Paid** status when the balance reaches zero.
+
+If a client pays in multiple installments, record each one separately. The invoice stays in **Sent** status until the full balance is cleared.
+
+<Note>
+  Marking an invoice paid in Clarely is for your records only. It doesn't process or move any funds — payment happens directly between you and your client.
+</Note>
+
+## Partial payments
+
+Clarely tracks partial payments. If a client pays a deposit or partial amount, record it. The invoice will show the remaining balance due and stay in **Sent** status until fully paid.
+
+## Stripe and your Clarely subscription
+
+Stripe is used for one thing in Clarely: processing your subscription payment to Clarely. It has no role in collecting payments from your clients. Your Clarely plan is billed to the card on file for your account — your clients never interact with Stripe.

@@ -8,32 +8,44 @@ Recurring jobs let you set up a repeating schedule for clients who need regular 
 
 ## Setting up a recurring job
 
+Start with a regular job that's already in your system. You can make any existing job recurring from the job detail page.
+
 <Steps>
-  <Step title="Open an accepted quote">
-    Go to the accepted quote for the client you want to set up on a recurring schedule.
+  <Step title="Open the job">
+    Go to **Jobs** and open the job you want to make recurring.
   </Step>
-  <Step title="Create job and enable recurrence">
-    Tap **Create Job**, then toggle on **Recurring**.
+  <Step title="Make it recurring">
+    Tap **Make Recurring** on the job detail page.
   </Step>
   <Step title="Set the schedule">
-    Choose the frequency: weekly, biweekly, monthly, or custom interval. Set the start date.
+    Choose the frequency: weekly, biweekly, every 3 weeks, every 4 weeks, monthly, or custom interval. Set how many future occurrences Clarely should generate ahead.
   </Step>
-  <Step title="Set an end date (optional)">
-    Add an end date if the recurring schedule has a defined end. Leave it open-ended for ongoing service.
+  <Step title="Set an end condition (optional)">
+    Choose when the series ends: no end date, after a set number of occurrences, or on a specific date. Leave it open-ended for ongoing service.
   </Step>
   <Step title="Save">
-    Tap **Save**. Clarely creates the first job and schedules the rest automatically.
+    Tap **Save**. Clarely creates the upcoming occurrences automatically and keeps generating new ones on a rolling basis.
   </Step>
 </Steps>
 
 ## How recurring jobs work
 
-Each occurrence is a separate job in your schedule. When one job is completed, the next one is already on your calendar. Each completed job can generate its own invoice.
+Each occurrence is a separate job in your schedule. Clarely generates them on a rolling window — as you complete jobs, new ones are added to keep your calendar populated ahead of schedule.
 
-## Editing a recurring schedule
+If auto-invoice is enabled and the job is linked to an accepted quote, completing each occurrence can automatically create a draft invoice for that service period.
 
-You can edit a single occurrence without affecting the rest of the series, or edit the entire series from any occurrence forward. Open the job and tap **Edit** — Clarely asks which jobs to apply the change to.
+## Editing a recurring series
 
-## Pausing or cancelling a recurring schedule
+Open any job in the series and tap **Edit Series** to make changes. You can apply changes to:
 
-Open any job in the series and tap **Cancel Series** to stop all future occurrences. To pause temporarily, cancel future occurrences individually and add them back manually when ready to resume.
+- **This occurrence only** — updates just the job you opened
+- **This and all future occurrences** — updates from this job forward, leaves past jobs unchanged
+- **The entire series** — applies to all past, current, and future jobs in the series
+
+Use "this occurrence only" for one-off adjustments. Use "this and all future" when the client's schedule changes going forward.
+
+## Cancelling a recurring series
+
+Open any job in the series and choose **Cancel Series**. Clarely asks the same scope options — cancel this occurrence, this and all future, or the entire series.
+
+Cancelling one occurrence doesn't affect the rest of the series. The cancelled job is removed from your active schedule but remains in your records.

@@ -8,17 +8,20 @@ sidebarTitle: "Create a quote"
   <Step title="Open Quotes">
     From the main menu, tap **Quotes**, then tap **New Quote**.
   </Step>
-  <Step title="Add client details">
-    Enter the client's name and email. The email is required — it's where the quote is sent for signature.
-  </Step>
-  <Step title="Set the quote type">
-    Choose whether this quote will follow the field service flow (Quote → Job → Invoice) or the professional services flow (Quote → Invoice on acceptance). You can change this before sending.
+  <Step title="Select a client">
+    Choose a client from your client list. If the client doesn't exist yet, add them first from the **Clients** section — you'll need their name and email address at minimum.
   </Step>
   <Step title="Add line items">
     Add each service or item. See [Line items](/quotes/line-items) for detail on how to structure them.
   </Step>
-  <Step title="Review and send">
-    Check the total and review the line items, then tap **Send Quote**. The client receives an email immediately.
+  <Step title="Set tax, terms, and deposit">
+    Optionally apply a tax rate, choose your contract terms (standard or enhanced), and configure a deposit if you want one collected before the job.
+  </Step>
+  <Step title="Choose an acceptance flow">
+    Select whether this quote should follow the **field service flow** (Quote → Job → Invoice) or the **professional services flow** (Quote → Invoice immediately on acceptance). You can change this before sending.
+  </Step>
+  <Step title="Save or send">
+    Tap **Save Draft** to save without sending, or go to the draft quote and tap **Send Quote** when ready. The client receives an email with a link to review and sign.
   </Step>
 </Steps>
 
@@ -30,8 +33,22 @@ sidebarTitle: "Create a quote"
 | Sent | Sent to client, awaiting signature |
 | Accepted | Client has signed — scope is locked |
 | Declined | Client declined the quote |
-| Expired | Quote passed its expiry date unsigned |
 
-## Notes and internal details
+## Editing a quote
 
-You can add internal notes to a quote that only you and your team see — clients never see these. Use them for job context, access instructions, or reminders.
+Quotes can only be edited while in **Draft** status. Once sent, the quote is locked for the client's review. If you need to make changes after sending, the cleanest option is to cancel the sent quote and create a new one with the updated details.
+
+Once a client signs (Accepted), the quote is permanently frozen — no edits are possible by anyone. See [Scope protection](/quotes/scope-protection).
+
+## Notes
+
+Two note fields are available on a quote:
+
+- **Owner notes** — visible only to you. Use these for job context, internal reminders, or anything your client shouldn't see.
+- **Staff notes** — visible to team members assigned to the job. Use these for access instructions, site details, or anything the crew needs to know.
+
+Clients never see either note field.
+
+## Quote follow-up
+
+If a sent quote hasn't been signed, Clarely can automatically follow up with your client after a set number of days. Configure follow-up timing and messaging in **Account** → **Quoting Defaults**.

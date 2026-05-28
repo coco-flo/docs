@@ -10,24 +10,34 @@ Every job in Clarely has a status that reflects where it is in the workflow. Kee
 
 | Status | Meaning |
 | --- | --- |
-| Draft | Job created but not yet scheduled |
+| Unscheduled | Job created but no date or time set yet |
 | Scheduled | Date and time set, work hasn't started |
 | In Progress | Work is actively underway |
-| Completed | Work is done — ready to invoice |
+| Completed | Work is done |
 | Cancelled | Job will not be completed |
 
 ## Updating a status
 
-Open any job and tap the status badge to change it. Clarely steps you through the sequence — you can't skip from Scheduled to Completed without going through In Progress, but you can move backward if needed.
+Open any job and tap the status button to move it forward. The sequence is:
+
+**Unscheduled → Scheduled → In Progress → Completed**
+
+You can also move backward (reopen a job) or cancel from any non-completed state.
 
 ## Completing a job
 
-When you mark a job **Completed**, Clarely prompts you to generate an invoice. You can generate immediately or come back to it later from the job detail page.
+When you mark a job **Completed**, a 15-second undo window appears. If you complete a job by mistake, tap **Undo** within that window to revert it.
+
+After the undo window closes, completion is final. If your account has auto-invoice enabled and the job came from an accepted quote, Clarely automatically creates a draft invoice. You still control when the invoice is sent to the client — it won't go out until you tap **Send Invoice**.
 
 <Note>
-  Completing a job doesn't automatically send an invoice. It makes the invoice available to generate. You still control when the invoice goes to the client.
+  Auto-invoice creates a draft — it doesn't send automatically. You review and send when you're ready.
 </Note>
 
 ## Cancelled jobs
 
 Cancelling a job removes it from your active schedule. The originating quote remains in your system for reference. Cancelled jobs can be reopened if needed.
+
+## Recurring jobs
+
+For recurring job series, cancelling one occurrence doesn't affect the rest of the series. To cancel all future occurrences, see [Recurring jobs](/jobs/recurring-jobs).
