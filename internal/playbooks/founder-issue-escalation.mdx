@@ -1,0 +1,41 @@
+---
+title: "Founder Issue Escalation"
+description: "When and how to escalate founder issues beyond standard triage."
+hidden: true
+noindex: true
+---
+
+<Warning>
+  Internal document. Not publicly linked or indexed.
+</Warning>
+
+## Escalation triggers
+
+These situations require immediate attention beyond standard triage:
+
+**Data loss or corruption**
+A founder reports missing quotes, jobs, or invoices. Stop normal operations. Check Supabase directly for the account. Escalate to AppDev immediately via Linear (Urgent priority). Communicate to founder within 1 hour with status update.
+
+**Payment processed but not recorded**
+Founder paid an invoice but it still shows as unpaid. Check Stripe for the transaction immediately. If Stripe shows paid, resync manually and update the invoice status. If Stripe does not show the payment, investigate with Stripe support.
+
+**Account inaccessible**
+Founder cannot log in. Check Supabase Auth for the account. Reset may be required. Resolve within 2 hours.
+
+**Signed quote data missing**
+The most critical issue type. A signed quote's scope is legally binding — if the frozen snapshot is missing or corrupted, it's a serious product and legal issue. Escalate to AppDev immediately with Urgent priority.
+
+## Communication during escalation
+
+Keep the founder informed at every step. If you don't have a resolution, acknowledge the issue and give a timeline for the next update. Silence is worse than bad news.
+
+Template for acknowledgment:
+> "I see the issue — this is on my radar and I'm working on it now. I'll have an update for you within [timeframe]."
+
+## Post-resolution
+
+After any escalated issue is resolved:
+- Update the Linear issue with resolution notes
+- Document the root cause in the issue
+- Identify if a doc needs to be created or updated
+- Consider whether a product fix is needed to prevent recurrence

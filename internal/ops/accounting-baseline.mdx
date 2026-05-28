@@ -1,0 +1,46 @@
+---
+title: "Accounting Baseline"
+description: "Internal reference for Clarely accounting setup."
+hidden: true
+noindex: true
+---
+
+<Warning>
+  Internal document. Not publicly linked or indexed.
+</Warning>
+
+## Platform decision
+
+Pending: Wave (free) or QuickBooks Self-Employed (~$15/month). Decision tracked in OPS-5.
+
+## Minimum setup required
+
+Once bank account is open (OPS-3):
+
+1. Connect Clarely LLC bank account
+2. Connect Stripe as revenue source
+3. Create expense categories:
+   - Infrastructure (Lovable, Resend, forwardemail)
+   - Domain / DNS (Route 53, domain registrations)
+   - Software Subscriptions (Linear, Better Stack, Mintlify, Tally)
+   - Professional Services (accountant, legal if applicable)
+4. Confirm Stripe payouts are captured as revenue correctly
+
+## Fixed monthly costs reference
+
+| Item | Cost |
+|---|---|
+| Lovable | $88/month |
+| forwardemail.net | ~$3/month |
+| Route 53 / domains | ~$5/month |
+| **Total fixed** | ~$96/month |
+
+Break-even: One paying Starter customer ($15/month) does not cover fixed costs. Two Starter customers cover fixed costs with margin.
+
+## Tax considerations
+
+Clarely LLC files as a single-member LLC (Schedule C). Consult accountant on:
+- Interaction with Scrub Hub Crew Schedule C on same return
+- Quarterly estimated tax payments
+- Home office deduction eligibility
+- Stripe 1099-K reporting thresholds

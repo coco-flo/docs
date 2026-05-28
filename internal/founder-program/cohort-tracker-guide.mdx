@@ -1,0 +1,51 @@
+---
+title: "Cohort Tracker Guide"
+description: "How to use and maintain the Clarely founder cohort tracker spreadsheet."
+hidden: true
+noindex: true
+---
+
+<Warning>
+  Internal document. Not publicly linked or indexed.
+</Warning>
+
+## File location
+
+Clarely_Founder_Cohort_Tracker.xlsx — stored in the Claude project library and available for download from outputs.
+
+## Columns
+
+| Column | Description |
+|---|---|
+| Founder # | Sequential ID |
+| Name | Full name |
+| Business name | Business they operate |
+| Email | Account email |
+| Business type | Cleaning / Trades / Professional services / Other |
+| Business size | Solo / Small (1–3) / Mid (4–15) |
+| Batch | 1–4 |
+| Plan | founder / free |
+| Start date | Account creation date |
+| Status | Active / Cancelled / Converted |
+| Month 1–6 surveys | Y/N per survey |
+| Compliance count | Auto-calculated from survey columns |
+| Compliant | Y/N (auto-calculated, threshold 5/6) |
+| Notes | Free text |
+
+## Auto-calculated fields
+
+The spreadsheet automatically calculates:
+- Compliance count (sum of Y responses across month 1–6)
+- Compliant flag (Y if count >= 5, N otherwise)
+- Cohort composition counts by type and size
+
+## Adding a new founder
+
+1. Add a row with all known fields at acceptance
+2. Set Status to Active
+3. Set Start date to account creation date
+4. Update survey columns as responses come in
+
+## Reviewing cohort composition
+
+The summary section at the top of the tracker shows current counts by type and size against targets. Check before accepting new founders to avoid exceeding composition targets.

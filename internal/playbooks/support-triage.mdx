@@ -1,0 +1,57 @@
+---
+title: "Support Triage Playbook"
+description: "How to handle founder support requests and route issues."
+hidden: true
+noindex: true
+---
+
+<Warning>
+  Internal document. Not publicly linked or indexed.
+</Warning>
+
+## Support channels
+
+During the founder cohort period, support comes through:
+1. **Founder group channel** (WhatsApp/iMessage/Signal — TBD) — primary channel for urgent issues
+2. **Tally support form** (OPS-6) — structured bug reports
+3. **Email to support@clarely.co** — fallback
+
+## Triage decision tree
+
+**Is it a bug (app not working as expected)?**
+- Yes → Create CLA- issue in Linear (App or Heimdall label), Priority: Urgent if blocking a workflow, High otherwise. Acknowledge the founder within 2 hours.
+- No → Continue
+
+**Is it a how-to question (founder doesn't know how to do something)?**
+- Yes → Answer directly from documentation if covered. If not covered, answer and create a new doc page (route to BizOps for Mintlify update).
+- No → Continue
+
+**Is it a billing or account issue?**
+- Yes → Handle directly. Check Stripe for payment status. Check Heimdall for account status. Do not escalate — resolve at Cody level.
+- No → Continue
+
+**Is it a feature request or enhancement idea?**
+- Yes → Log it. Thank the founder. Create OPS issue or CLA issue with Founder Feedback label. Route to Prod chat for roadmap consideration.
+
+## Response time targets
+
+| Priority | Target first response |
+|---|---|
+| App broken / can't work | 2 hours |
+| Major workflow blocked | 4 hours |
+| General question | 24 hours |
+| Feature request | Acknowledge within 48 hours |
+
+## Linear issue creation from support
+
+Every bug report from a founder becomes a CLA- issue. Include:
+- Founder name (in description, not title)
+- Steps to reproduce
+- Expected vs actual behavior
+- Device and OS
+- Founder Feedback label
+- Link to the Tally form submission if applicable
+
+## Known issues log
+
+Maintain a running note of open known issues to acknowledge quickly in future reports. Update after each CLA- issue is closed.

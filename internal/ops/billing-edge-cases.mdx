@@ -1,0 +1,43 @@
+---
+title: "Billing Edge Cases"
+description: "Decisions log for billing edge cases and policy decisions."
+hidden: true
+noindex: true
+---
+
+<Warning>
+  Internal document. Not publicly linked or indexed.
+</Warning>
+
+This document records decisions made about billing edge cases. Each decision is logged with its rationale so future handling is consistent.
+
+## Founder Rate decisions
+
+**Founder returning after cancellation**
+Decision: Founder Rate does not automatically reinstate on return. Founders who cancel and return are offered standard pricing unless a specific exception is approved by the founder.
+
+**Founder Rate on plan upgrade attempt**
+Decision: Founders cannot upgrade within the Founder Rate. The Founder Rate is fixed at Business-tier access. If a founder wants features not included, note the request and route to Prod.
+
+**Survey non-compliance**
+Decision: Founders must complete 5 of 6 monthly surveys (80% threshold) to retain Founder Rate at the 6-month mark. Non-compliant founders receive personal outreach before automatic reversion. Grace period: 7 days after month 6 survey window closes.
+
+## Payment failure decisions
+
+**First payment failure**
+Decision: Stripe handles retry automatically. Do not manually intervene unless the founder contacts support.
+
+**Repeated payment failures (3+)**
+Decision: Reach out to founder directly via the founder group channel. Offer to update payment method. If unresolved after 7 days, suspend account access pending resolution.
+
+## Dispute handling
+
+**Stripe dispute filed**
+Decision: Provide the signed quote as primary evidence in all disputes. The signed quote with timestamp and IP record is the primary defense. Submit immediately — Stripe dispute window is tight.
+
+**Duplicate payment**
+Decision: Issue full refund of the duplicate charge via Stripe dashboard immediately. No waiting period. Update the invoice status manually in Clarely after refund is confirmed.
+
+## Refund policy
+
+No formal refund policy published. Handle case by case. Document all refund decisions here.

@@ -1,0 +1,49 @@
+---
+title: "Stripe Configuration"
+description: "Internal reference for Clarely Stripe account setup and configuration."
+hidden: true
+noindex: true
+---
+
+<Warning>
+  Internal document. Do not share this URL or include credentials here — store credentials in Bitwarden only.
+</Warning>
+
+## Account configuration checklist
+
+- [ ] Business name updated to Clarely LLC
+- [ ] Business address matches LLC registration
+- [ ] EIN added as tax ID
+- [ ] Payout bank account updated to Clarely LLC business account
+- [ ] Account type set to LLC (not individual/sole proprietor)
+- [ ] Tax collection enabled
+
+## Products and prices
+
+| Product | Price ID | Amount | Billing |
+|---|---|---|---|
+| Founder Rate | (store in Bitwarden) | $20/month | Monthly |
+| Starter | — | $15/month | Monthly |
+| Professional | — | $29/month | Monthly |
+| Team | — | $49/month | Monthly |
+| Business | — | $79/month | Monthly |
+
+## Founder Rate details
+
+- Internal product — not visible in customer portal
+- Maps to `founder` plan in app (Business-tier feature access)
+- Displays as "Founder" in all in-product UI
+- 6-month free period before billing starts
+- "For as long as Clarely operates this plan"
+
+## Payout schedule
+
+Standard Stripe payout: 2 business days after payment received. First payout may be longer during account verification.
+
+## Processing fees
+
+2.9% + $0.30 per transaction (standard card). Deducted before payout. No additional Clarely fees.
+
+## Tax collection
+
+Enabled. Stripe handles tax calculation and remittance.
