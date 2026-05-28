@@ -1,0 +1,33 @@
+---
+title: "invoice-status"
+description: "Understand invoice statuses and what they mean."
+---
+
+Every invoice in Clarely has a status that tells you exactly where it stands.
+
+## Status definitions
+
+| Status | Meaning |
+| --- | --- |
+| Draft | Created but not yet sent to the client |
+| Sent | Sent to client, awaiting payment |
+| Paid | Payment received and confirmed |
+| Overdue | Past due date, payment not received |
+| Written Off | Marked uncollectible — removed from active tracking |
+
+## How statuses update
+
+Most status changes happen automatically:
+
+- **Draft → Sent**: when you tap Send Invoice
+- **Sent → Paid**: when Stripe confirms payment, or when you tap Mark as Paid manually
+- **Sent → Overdue**: automatically the day after the due date passes
+
+Manual status changes:
+
+- **Sent/Overdue → Paid**: tap Mark as Paid and enter payment details
+- **Any → Written Off**: tap Write Off on the invoice
+
+## Filtering by status
+
+In your invoice list, use the filter controls to view invoices by status. Filtering by **Overdue** shows everything that needs follow-up. Filtering by **Paid** shows your collected revenue.

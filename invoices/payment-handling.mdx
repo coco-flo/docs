@@ -1,0 +1,30 @@
+---
+title: "payment-handling"
+description: "How payments are collected and processed in Clarely."
+---
+
+Clarely collects payments through Stripe, one of the most widely used payment processors in the world. Your clients pay by card through a secure hosted payment page.
+
+## How it works
+
+When a client receives an invoice, they click the payment link and enter their card details on a Stripe-hosted page. Stripe processes the payment and notifies Clarely. The invoice status updates to **Paid** automatically.
+
+## Payout timeline
+
+Funds are deposited to your connected bank account on Stripe's standard payout schedule — typically 2 business days after payment is received. Your first payout may take longer while Stripe verifies your account.
+
+## Processing fees
+
+Stripe charges a processing fee on each transaction (2.9% \+ \$0.30 for standard card payments). This fee is deducted from the payment before it reaches your account. Clarely does not add any additional fees on top of Stripe's rates.
+
+## Accepted payment methods
+
+Clarely supports all major credit and debit cards through Stripe. Additional payment methods (ACH, Apple Pay, Google Pay) may be available depending on your Stripe account configuration.
+
+## Connecting your bank account
+
+Payout destination is configured in your Stripe account. Go to your Stripe dashboard to add or update your bank account for payouts.
+
+## Payment receipts
+
+Stripe automatically sends a payment receipt to your client when payment is processed. You don't need to do anything — the receipt goes out immediately after the transaction completes.

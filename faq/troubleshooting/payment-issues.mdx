@@ -1,0 +1,39 @@
+---
+title: "payment-issues"
+description: "Resolve problems with payment collection."
+---
+
+## Client says they paid but invoice still shows Sent
+
+Stripe processes payments in real time. If the invoice still shows Sent after your client says they paid:
+
+1. Check your Stripe dashboard for the transaction
+2. If the payment shows in Stripe, it may take a few minutes to sync to Clarely — refresh the invoice
+3. If the payment doesn't show in Stripe, the transaction may not have completed — ask the client to try again
+
+## Client's payment is failing
+
+Ask the client to:
+
+- Double-check their card number, expiry, and CVV
+- Make sure their billing address matches what's on file with their bank
+- Try a different card
+- Contact their bank — some banks block online transactions by default
+
+If they continue to have trouble, they can contact their bank to authorize the transaction, then retry.
+
+## Payment processed but funds haven't arrived
+
+Stripe's standard payout is 2 business days after payment. If it's been longer:
+
+1. Log in to your Stripe dashboard and check payout status
+2. Verify your bank account details in Stripe are correct
+3. Check if Stripe has flagged your account for review — new accounts sometimes have a longer initial hold
+
+## Invoice was paid twice
+
+Contact [support@clarely.co](mailto:support@clarely.co) immediately with the invoice number. We'll help coordinate with Stripe for a refund of the duplicate charge.
+
+## I need to refund a client
+
+Refunds are issued through Stripe. Log in to your Stripe dashboard, find the payment, and issue a full or partial refund from there. The invoice status in Clarely doesn't update automatically for refunds — mark it manually if needed.

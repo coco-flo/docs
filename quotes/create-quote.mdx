@@ -1,0 +1,36 @@
+---
+title: "create-quote"
+description: "Build a new quote with line items and client details."
+---
+
+<Steps>
+  <Step title="Open Quotes">
+    From the main menu, tap **Quotes**, then tap **New Quote**.
+  </Step>
+  <Step title="Add client details">
+    Enter the client's name and email. The email is required — it's where the quote is sent for signature.
+  </Step>
+  <Step title="Set the quote type">
+    Choose whether this quote will follow the field service flow (Quote → Job → Invoice) or the professional services flow (Quote → Invoice on acceptance). You can change this before sending.
+  </Step>
+  <Step title="Add line items">
+    Add each service or item. See [Line items](/quotes/line-items) for detail on how to structure them.
+  </Step>
+  <Step title="Review and send">
+    Check the total and review the line items, then tap **Send Quote**. The client receives an email immediately.
+  </Step>
+</Steps>
+
+## Quote statuses
+
+| Status | Meaning |
+| --- | --- |
+| Draft | Created but not yet sent |
+| Sent | Sent to client, awaiting signature |
+| Accepted | Client has signed — scope is locked |
+| Declined | Client declined the quote |
+| Expired | Quote passed its expiry date unsigned |
+
+## Notes and internal details
+
+You can add internal notes to a quote that only you and your team see — clients never see these. Use them for job context, access instructions, or reminders.
