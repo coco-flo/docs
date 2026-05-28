@@ -1,0 +1,32 @@
+---
+title: "invoices"
+description: "Common questions about invoicing and payment."
+---
+
+**Can I change the line items on an invoice?**
+
+No. Invoice line items are pulled from the signed quote and cannot be changed. This preserves the integrity of the agreement. For additional work, create a new quote and invoice.
+
+**What if my client wants to pay by cash or check?**
+
+Accept the payment and record it in Clarely manually. Open the invoice and tap **Mark as Paid**. Enter the payment method and date. This updates the invoice status without processing any funds through Stripe.
+
+**How long does it take to receive payment?**
+
+Once your client pays online, Stripe typically deposits funds to your bank account within 2 business days. Your first payout may take longer during account verification.
+
+**Can I send an invoice before completing the job?**
+
+For field service jobs, invoices are generated after the job is marked complete. For professional services quotes, you can invoice immediately on acceptance without a job step.
+
+**What if my client disputes a charge?**
+
+The signed quote is your primary defense. It shows exactly what the client agreed to pay for, with their signature and timestamp. Provide the signed quote to Stripe as supporting documentation in any dispute.
+
+**Can I add a discount to an invoice?**
+
+Add discounts as a line item with a negative amount on the originating quote. Whatever is on the signed quote carries to the invoice.
+
+**What happens if a payment fails?**
+
+Stripe notifies you and your client when a payment fails. The client can retry with a different card through the payment link. The invoice remains in Sent status until payment succeeds.
