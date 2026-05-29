@@ -1,14 +1,6 @@
----
-title: "Free Forever Variant"
-description: "Definition, terms, and handling for the Free Forever cohort."
-hidden: true
-noindex: true
-sidebarTitle: "Free Forever variant"
----
-
-<Warning>
-  Internal document. Not publicly linked or indexed.
-</Warning>
+<Info>
+  **Clarely Internal — Founder Program** · Access via direct link only. Last reviewed: May 2026. [Back to Internal Hub](/r7-hub)
+</Info>
 
 ## What it is
 
@@ -18,46 +10,41 @@ They are full participants in the founder program: they join the group channel, 
 
 ## Who gets it
 
-Free Forever is awarded by explicit decision. It's not the default for any cold outreach. Typical cases:
+Free Forever is awarded by explicit decision — not the default for any cold outreach. Typical cases:
 
 - Close personal contacts who are genuinely using the product but where charging would be awkward
 - Advisors or collaborators contributing meaningfully to the product
-- Edge cases where the person's business doesn't match the Founder Rate model but their feedback is uniquely valuable
+- Edge cases where the person's feedback is uniquely valuable but their business doesn't fit the Founder Rate model
 
 Do not offer Free Forever to avoid a difficult conversation about pricing. If someone isn't a good fit for Founder Rate, they should receive standard pricing or a rejection.
 
 ## Plan setup
 
-- Stripe: No subscription created. No credit card collected.
+- Stripe: No subscription. No credit card collected.
 - App plan: `free`
 - `is_early_adopter`: `true`
-- `trial_ends_at`: Set to a far-future date (5\+ years) to exclude from trial expiry cron
-- In Heimdall: displays as "Free" plan with early adopter flag visible
+- `trial_ends_at`: Set to a date 5\+ years in the future
+- Heimdall display: "Free" plan with early adopter flag visible
 
 ## What they can access
 
-The Free plan with `is_early_adopter = true` means:
+Standard Free tier limits apply: 100 quotes/month cap, 50 client cap, no email delivery, no digital signature. The `is_early_adopter` flag is for internal tracking only — it does not expand feature access.
 
-- Standard Free tier feature limits apply (100 quotes/month cap, 50 client cap, no email delivery, no digital signature)
-- The early adopter flag is for internal tracking and support identification only — it does not expand feature access
-
-**If you intend to give a Free Forever founder access to more features**, they need to be on the Founder Rate (\$20/month, Business tier) or a higher paid plan, not Free Forever. Free Forever is genuinely free-tier access, no more.
+If a Free Forever founder needs more features, they need a paid plan. Free Forever is not a workaround.
 
 ## Acceptance email
 
-Use the Free Forever variant of the [acceptance email templates](/internal/founder-program/acceptance-email-templates).
+Use Variant 2 in [Acceptance email templates](/r7-hub/founder-program/acceptance-email-templates).
 
 ## Survey participation
 
-Free Forever founders participate in the same 6-month survey cadence. Survey compliance is tracked in the cohort tracker but has no billing consequence (there is no billing to revert). Track compliance for product feedback value, not enforcement.
+Same 6-month cadence as Founder Rate founders. Compliance is tracked but has no billing consequence.
 
 ## Conversion
 
-At month 6, Free Forever founders are not given a conversion pitch. They are thanked and remain on Free access. If they express interest in upgrading at any point, direct them to the standard plan pricing page.
+At month 6, no conversion pitch. Thank them and confirm they remain on Free access. If they express interest in upgrading, direct them to standard plan pricing.
 
-## Tracking in the cohort tracker
-
-In the cohort tracker, Free Forever founders are recorded with:
+## Cohort tracker
 
 - Plan column: `free-forever`
 - Cohort type: Free Forever

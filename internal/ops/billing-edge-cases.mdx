@@ -1,68 +1,68 @@
-<Warning>
-  Internal document. Not publicly linked or indexed.
-</Warning>
+<Info>
+  **Clarely Internal — Operations** · Access via direct link only. Last reviewed: May 2026. [Back to Internal Hub](/r7-hub)
+</Info>
 
-This document records decisions made about billing edge cases. Each entry is logged so future handling is consistent.
+Records decisions made about billing edge cases for consistent future handling.
 
-**Scope note:** "Billing" in this document refers exclusively to Clarely subscription billing (business owners paying for their Clarely plan via Stripe). Client payments collected by business owners from their clients are peer-to-peer (Venmo, Cash App, Zelle) and are entirely outside Clarely's billing system.
+**Scope note:** "Billing" here refers exclusively to Clarely subscription billing (business owners paying for their Clarely plan via Stripe). Client payments via Venmo, Cash App, Zelle are outside Clarely's billing system.
 
 ---
 
 ## Founder Rate edge cases
 
-**Founder returning after cancellation:** Founder Rate does not automatically reinstate. Returning founders are offered standard pricing. Exceptions require explicit approval by founder. Document any exceptions here.
+**Returning after cancellation:** Founder Rate does not automatically reinstate. Returning founders receive standard pricing. Exceptions require explicit founder approval. Document any exceptions here.
 
-**Founder Rate upgrade request:** Founders cannot upgrade beyond the Founder Rate. It is fixed at Business-tier access. Log the request and route to Prod for roadmap consideration.
+**Upgrade request:** Founders cannot upgrade beyond Founder Rate (fixed at Business-tier). Log the request and route to Prod.
 
-**Survey non-compliance at month 6:** Founders who respond to fewer than 5 of 6 surveys receive personal outreach before reversion. Grace period: 7 days after month 6 survey window closes. If unresolved, revert to standard pricing in Heimdall.
+**Survey non-compliance at month 6:** Fewer than 5 of 6 surveys → personal outreach before any billing action. 7-day grace period after month 6 survey window. If unresolved, revert to standard pricing in Heimdall.
 
 ---
 
 ## Payment failure scenarios
 
-**First payment failure:** Stripe handles retry automatically. Do not manually intervene unless the founder contacts support. Stripe default retry: day 1, 3, 5, 7.
+**First failure:** Stripe handles retry automatically. Don't intervene unless founder contacts support. Default retry: day 1, 3, 5, 7.
 
-**Repeated failures (3\+):** Reach out to founder directly via group channel. Offer to update payment method. If unresolved after 7 days: suspend account access in Heimdall. Communicate clearly.
+**Repeated failures (3\+):** Reach out via group channel. Offer to update payment method. If unresolved after 7 days: suspend in Heimdall.
 
 Suspension process:
 
 1. Open Heimdall and locate the account
-2. Suspend with reason: "payment\_failure" and notes referencing the outreach attempts
-3. Send email: "Your Clarely account has been temporarily suspended due to payment failure. Please update your payment method at clarely.app/settings/account to restore access. Reply to this email if you need help."
-4. Log action in Heimdall audit trail
+2. Suspend with reason: `payment_failure` and notes referencing outreach attempts
+3. Send email: "Your Clarely account has been temporarily suspended due to payment failure. Please update your payment method at clarely.app/settings/account to restore access. Reply if you need help."
+4. Action is logged in Heimdall audit trail automatically
 
-**Account data on suspension:** Data is fully preserved during suspension. Owner cannot log in but no data is deleted. If payment is resolved, reactivate via Heimdall.
+**Data on suspension:** Fully preserved. Owner cannot log in but no data is deleted. Reactivate via Heimdall when resolved.
 
 ---
 
-## Dispute handling (Clarely subscription disputes only)
+## Dispute handling
 
-**Stripe dispute filed:** Provide the Stripe invoice as primary evidence immediately. Stripe dispute window is typically 7 days. Do not wait. Note: these are disputes about Clarely subscription charges, not about work your business owners did for their clients.
+**Stripe subscription dispute:** Provide the Stripe invoice as primary evidence immediately. Dispute window is typically 7 days — do not wait. These are Clarely subscription billing disputes, not client disputes about work performed.
 
-**Duplicate charge:** Issue full refund via Stripe dashboard immediately. No waiting period.
+**Duplicate charge:** Issue full refund via Stripe dashboard immediately.
 
 ---
 
 ## Refunds
 
-No published refund policy. Handle case by case. Document all refund decisions here.
+No published policy. Handle case by case. Document all decisions here.
 
 ---
 
 ## Plan changes and data
 
-**Plan upgrade:** Takes effect immediately.
+**Upgrade:** Takes effect immediately.
 
-**Plan downgrade:** Takes effect at end of current billing cycle. Features above new tier become unavailable at next billing date.
+**Downgrade:** Takes effect at end of current billing cycle.
 
 **Cancellation:** Account moves to Free plan at end of billing period. All data retained indefinitely.
 
-**Account data on cancellation:** Retained unless the owner explicitly requests deletion. There is no automatic deletion on cancellation. Accounts that remain suspended for 12 months after suspension become eligible for purge via Heimdall, but purge is manual and admin-initiated.
+**Data on cancellation:** Retained unless the owner requests deletion. No automatic deletion. Accounts suspended for 12 months become eligible for manual purge via Heimdall.
 
 ---
 
 ## Free Forever edge cases
 
-**Free Forever access questions:** Free Forever founders are on the standard free plan. They have Free-tier feature limits. If a Free Forever founder asks for more features, they need to be on a paid plan. Free Forever is not a workaround for paid features.
+**Access questions:** Free Forever founders are on the standard free plan with Free-tier feature limits. `is_early_adopter` is for tracking only — it does not expand feature access. If a Free Forever founder needs more features, they need a paid plan.
 
-**Free Forever compliance failure:** No billing consequence. Track in cohort tracker for product feedback purposes only.
+**Compliance failure:** No billing consequence. Track for product feedback purposes only.

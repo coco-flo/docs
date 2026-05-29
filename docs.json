@@ -187,10 +187,54 @@
             ]
           }
         ]
+      },
+      {
+        "tab": "Internal",
+        "groups": [
+          {
+            "group": "Decisions",
+            "pages": [
+              "internal/decisions/billing-decisions-log",
+              "internal/decisions/product-decisions-summary"
+            ]
+          },
+          {
+            "group": "Founder Program",
+            "pages": [
+              "internal/founder-program/selection-process",
+              "internal/founder-program/cohort-tracker-guide",
+              "internal/founder-program/engagement-cadence",
+              "internal/founder-program/acceptance-email-templates",
+              "internal/founder-program/free-forever-variant",
+              "internal/founder-program/founder-onboarding-checklist",
+              "internal/founder-program/founder-messaging-guide"
+            ]
+          },
+          {
+            "group": "Operations",
+            "pages": [
+              "internal/ops/accounting-baseline",
+              "internal/ops/llc-formation",
+              "internal/ops/stripe-configuration",
+              "internal/ops/billing-edge-cases",
+              "internal/ops/security-practices"
+            ]
+          },
+          {
+            "group": "Playbooks",
+            "pages": [
+              "internal/playbooks/launch-checklist",
+              "internal/playbooks/support-triage",
+              "internal/playbooks/founder-issue-escalation",
+              "internal/playbooks/churn-prevention"
+            ]
+          }
+        ]
       }
     ]
   },
   "metadata": {
     "timestamp": false
-  }
+  },
+  "seo": {}
 }
