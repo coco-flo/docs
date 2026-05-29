@@ -1,6 +1,10 @@
-<Warning>
-  Internal document. Not publicly linked or indexed. Authoritative source for strategy and history is the Clarely Product Decisions Log in the Claude project library. This document is the operational quick-reference.
-</Warning>
+<Info>
+  **Clarely Internal — Decisions** · Last reviewed: May 2026 · Access via direct link only.
+</Info>
+
+Operational quick-reference for locked product decisions. Authoritative source for full history is the Clarely Product Decisions Log in the Claude project library.
+
+---
 
 ## Core identity (locked)
 
@@ -60,8 +64,8 @@ Annual billing = 2 months free on all paid tiers.
 | Acceptance flow toggle | — | ✓ | ✓ | ✓ | ✓ | ✓ |
 | Net terms | — | ✓ | ✓ | ✓ | ✓ | ✓ |
 | Tax rate | — | ✓ | ✓ | ✓ | ✓ | ✓ |
-| Quote follow-up basic (on/off) | — | ✓ | ✓ | ✓ | ✓ | ✓ |
-| Quote follow-up advanced (configurable) | — | — | ✓ | ✓ | ✓ | ✓ |
+| Quote follow-up basic | — | ✓ | ✓ | ✓ | ✓ | ✓ |
+| Quote follow-up advanced | — | — | ✓ | ✓ | ✓ | ✓ |
 | Automated invoice reminders | — | — | ✓ | ✓ | ✓ | ✓ |
 | Expense tracking (coming soon) | — | — | ✓ | ✓ | ✓ | ✓ |
 | Recurring jobs | — | — | ✓ | ✓ | ✓ | ✓ |
@@ -78,21 +82,21 @@ Annual billing = 2 months free on all paid tiers.
 
 ## Two-workflow structure (locked)
 
-**Flow A — Field service (default):** Quote → client signs → job auto-created → schedule job → complete job → invoice generated → payment collected. Use for: cleaning, trades, maintenance, landscaping, any on-site work.
+**Flow A — Field service (default):** Quote → client signs → job auto-created → schedule → complete → invoice → payment. Use for: cleaning, trades, maintenance, any on-site work.
 
-**Flow B — Professional services:** Quote → client signs → invoice auto-created and sent. No job step. Use for: consulting, design, remote work, any deliverable-based work.
+**Flow B — Professional services:** Quote → client signs → invoice auto-created and sent immediately. No job step. Use for: consulting, design, remote work.
 
-The toggle between flows is set per quote. Default is configurable per account. Flow A is the system default.
+Toggle is set per quote. Default configurable per account. Flow A is the system default.
 
 ---
 
 ## Settings architecture (locked)
 
-8 sections in Settings. Mobile: home screen list of tappable rows. Desktop: persistent left sidebar.
+8 sections. Mobile: home screen list. Desktop: persistent left sidebar. Sections below plan tier are locked with upgrade prompt, never hidden.
 
 | Section | Key contents |
 | --- | --- |
-| Business | Name, slug (staff portal URL), logo, address, phone, payment handles (Venmo/Cash App/Zelle), payment notes |
+| Business | Name, slug, logo, address, phone, payment handles, payment notes |
 | Quoting | Tax rate, contract terms, acceptance flow default, quote expiry, deposit default, follow-up |
 | Invoicing | Net terms, auto-invoice toggle, invoice reminders, late fee, footer text |
 | Notifications | Email and SMS toggles (SMS is Business\+) |
@@ -101,13 +105,11 @@ The toggle between flows is set per quote. Default is configurable per account. 
 | Export | 8 export types (Team\+ plan) |
 | Account | Profile, password, plan/billing, referral (Starter\+), account deletion |
 
-Settings sections below plan tier are locked with upgrade prompt, never hidden.
-
 ---
 
 ## Staff portal (locked)
 
-Team members do not use clarely.app. They log in via a staff portal at `clarely.app/[business-slug]`. Authentication is email \+ 6-digit OTP sent per session. Sessions last 10 hours. No password. Team members see only their assigned jobs.
+Team members log in via `clarely.app/[business-slug]`. Email \+ 6-digit OTP per session. Sessions last 10 hours. No password. Team members see only assigned jobs.
 
 ---
 
@@ -126,14 +128,14 @@ Never use: operator, staff, field worker.
 
 ## CLR account numbers
 
-Every Clarely account has a sequential CLR account number (CLR-0001, CLR-0002, etc.) shown in Heimdall. Used for support identification. Cannot be changed.
+Every account has a sequential CLR number (CLR-0001, CLR-0002, etc.) visible in Heimdall. Used for support identification. Cannot be changed.
 
 ---
 
 ## Post-launch roadmap (confirmed order)
 
-1. v1.1 — Expense tracking (ships as Professional feature, schema exists at launch)
+1. v1.1 — Expense tracking (Professional tier, schema exists at launch)
 2. v1.2\+ — Quote templates, data export improvements, branding toggle
-3. v2.0\+ — AI quote assist (Business), metrics dashboard, SMS notifications
+3. v2.0\+ — AI quote assist (Business), metrics dashboard, SMS
 
-Do not scope, promise, or build features not listed here until the relevant milestone is confirmed by Prod.
+Do not scope, promise, or build features not listed here until confirmed by Prod.

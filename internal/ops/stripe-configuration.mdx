@@ -1,6 +1,6 @@
-<Warning>
-  Internal document. Do not store credentials here. All credentials in Bitwarden only.
-</Warning>
+<Info>
+  **Clarely Internal — Operations** · Last reviewed: May 2026 · Access via direct link only. Do not store credentials here — all credentials in Bitwarden only.
+</Info>
 
 ## Account configuration checklist
 
@@ -27,14 +27,14 @@
 | Business | Monthly | \$79/mo | Store in Bitwarden |
 | Business | Annual | \$790/yr | Store in Bitwarden |
 
-**Free plan:** No Stripe product. Free tier is managed in-app with no payment.
+Free plan: no Stripe product. Free tier is managed in-app with no payment.
 
 ## Founder Rate details
 
 - Internal product: not visible in customer portal
 - Maps to `founder` plan in app (Business-tier feature access)
 - Displays as "Founder" in all in-product UI
-- 6-month free period before billing starts (configure subscription start date at acceptance)
+- 6-month free period before billing starts
 - Price: "for as long as Clarely operates this plan"
 
 ## Payout schedule
@@ -43,11 +43,11 @@ Standard Stripe payout: 2 business days after payment received. First payout may
 
 ## Processing fees
 
-2.9% \+ \$0.30 per transaction (standard card). Deducted before payout. No additional Clarely fees.
+2.9% \+ \$0.30 per transaction (standard card). Deducted before payout.
 
 ## Webhook configuration
 
-**Endpoint URL:** \[Add Clarely production webhook URL here - retrieve from AppDev\]
+**Endpoint URL:** Retrieve from AppDev and store in Bitwarden.
 
 **Events to listen for:**
 
@@ -57,21 +57,17 @@ Standard Stripe payout: 2 business days after payment received. First payout may
 - `invoice.payment_succeeded`
 - `invoice.payment_failed`
 
-**Webhook secret:** Store in Bitwarden. The app validates this secret on every webhook event. If the secret rotates, AppDev must update the environment variable in Supabase.
+**Webhook secret:** Store in Bitwarden. The app validates this secret on every webhook event. If the secret rotates, AppDev must update the environment variable in Supabase directly — not via the Lovable UI.
 
 **If webhook breaks:** Plan changes and subscription events stop syncing to the app. Symptoms: user upgrades but plan doesn't change in the app, or subscription cancels but access continues. Check Stripe webhook dashboard for failed deliveries. Contact AppDev immediately.
 
-**Webhook signing secret rotation:** Rotate if exposed. Update in Supabase environment variables (not in Lovable UI - use Supabase dashboard directly).
-
 ## Dunning and retry settings
 
-Stripe default retry schedule: day 1, 3, 5, 7 after failed payment. Confirm these are active in Stripe Settings.
-
-Customer failure notification emails: confirm enabled in Stripe Settings before first paid subscriber converts.
+Stripe default retry schedule: day 1, 3, 5, 7 after failed payment. Confirm active in Stripe Settings. Customer failure notification emails: confirm enabled before first paid subscriber converts.
 
 ## Customer portal configuration
 
-The Stripe Customer Portal is accessible from Clarely account settings. Configured capabilities:
+Accessible from Clarely account settings.
 
 - View billing history: enabled
 - Update payment method: enabled
@@ -82,4 +78,4 @@ Portal return URL: `clarely.app/settings/account`
 
 ## Tax collection
 
-Stripe Tax enabled. Handles calculation and remittance. Confirm nexus states are correctly configured (Florida at minimum). Consult accountant for multi-state obligations as customer base grows.
+Stripe Tax enabled. Confirm Florida nexus is correctly configured. Consult accountant for multi-state obligations as customer base grows.

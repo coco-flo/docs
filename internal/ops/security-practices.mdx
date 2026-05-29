@@ -1,20 +1,12 @@
----
-title: "Security Practices"
-description: "Credential management, secret rotation, and incident response for Clarely operations."
-hidden: true
-noindex: true
-sidebarTitle: "Security practices"
----
-
-<Warning>
-  Internal document. Not publicly linked or indexed.
-</Warning>
+<Info>
+  **Clarely Internal — Operations** · Last reviewed: May 2026 · Access via direct link only. Never store credentials, API keys, or secrets in this document.
+</Info>
 
 ## Credential storage
 
 **All credentials live in Bitwarden.** No exceptions. Never store credentials in:
 
-- Mintlify docs (including this one)
+- This document or any other docs page
 - Linear issue descriptions
 - Lovable prompts
 - Slack or group chat messages
@@ -24,28 +16,24 @@ If a credential appears in any of the above, rotate it immediately.
 
 ## Bitwarden vault structure
 
-Organize credentials by service with consistent naming:
-
 | Entry name | What it contains |
 | --- | --- |
 | Clarely Admin - Root Account | Heimdall root email, password |
 | Clarely Admin - Root TOTP Secret | Heimdall root Authy TOTP seed |
 | Clarely Admin - ADMIN\_BRIDGE\_SECRET | Shared secret between Heimdall and clarely.app |
-| Clarely Supabase - clarely.app | Supabase project keys for knhktxejotneileonrjq |
-| Clarely Supabase - Heimdall | Supabase project keys for htscxvqfbnvluktpnzrw |
+| Clarely Supabase - clarely.app | Supabase project keys (clarely.app project) |
+| Clarely Supabase - Heimdall | Supabase project keys (Heimdall project) |
 | Clarely Stripe - API Keys | Stripe secret key, webhook signing secret |
 | Clarely Stripe - Price IDs | All Stripe product/price IDs |
-| Clarely LLC - Entity docs | Articles of Organization, EIN |
+| Clarely LLC - Entity docs | Articles of Organization, EIN, addresses |
 | Clarely Email - Resend API Key | Resend API key for sending domain |
 | clargate.tools - GoDaddy | GoDaddy account for Heimdall domain |
 
 ## Heimdall access
 
-Heimdall at `heimdall.clargate.tools` is the admin control plane. Access rules:
-
-- Heimdall URL is not publicly linked. Share only via Bitwarden secure share or direct trusted communication.
+- Heimdall URL is not publicly linked. Share only via Bitwarden secure share.
 - Always use the `super_admin` role for daily operations. Root is the break-glass account.
-- Root credentials are Authy-backed (TOTP app-based). Never share or document the TOTP seed outside Bitwarden.
+- Root credentials are Authy-backed (TOTP). Never share or document the TOTP seed outside Bitwarden.
 - Every action in Heimdall is audit-logged. The log is append-only and hash-chained.
 
 ## Secret rotation schedule
@@ -60,27 +48,27 @@ Heimdall at `heimdall.clargate.tools` is the admin control plane. Access rules:
 
 ## If a secret is exposed
 
-1. Rotate the secret immediately (don't investigate first - rotate first)
+1. Rotate the secret immediately — don't investigate first
 2. Update all systems that use the secret
 3. Update Bitwarden
 4. Review audit logs to determine what was accessed
 5. If customer data was potentially accessed, assess scope before deciding on disclosure
 
-A secret in a Lovable prompt is considered exposed. Rotate immediately.
+A secret appearing in a Lovable prompt is considered exposed. Rotate immediately.
 
 ## Supabase security notes
 
-- The `anon` key is public by design (used in the browser). Row Level Security protects data at the database level.
-- The `service_role` key bypasses RLS. It is used only in Edge Functions, never in frontend code.
+- The `anon` key is public by design. Row Level Security protects data at the database level.
+- The `service_role` key bypasses RLS. Used only in Edge Functions, never in frontend code.
 - Never commit the service role key to any repository or include it in Lovable prompts.
 
 ## Backup posture
 
-Heimdall runs an hourly backup of clarely.app customer data to a private Supabase Storage bucket. Verify:
+Heimdall runs an hourly backup of clarely.app customer data to a private Supabase Storage bucket.
 
-- Hourly runs are completing successfully (check Heimdall Backup overview)
-- Daily runs are completing (check History tab)
-- Restore has been tested at least once (quarterly)
+- Verify hourly runs are completing (Heimdall Backup overview)
+- Verify daily runs are completing (History tab)
+- Restore test: at least once per quarter
 
 ## Pending security items
 
