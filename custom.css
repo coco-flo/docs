@@ -100,11 +100,6 @@ body, p, li, td {
   font-weight: 400;
 }
 
-html:not(.dark) .text-muted,
-html:not(.dark) [class*='secondary'] {
-  color: #6B7280;
-}
-
 /* ============================================================
    LINKS AND ACTIVE STATES
    ============================================================ */
@@ -125,43 +120,44 @@ a:hover {
 }
 
 /* ============================================================
-   HERO CARDS (kb-feature-card) — fix icon visibility
-   The two large cards on the welcome page use kb-feature-card.
-   Icons are SVGs inside a ring container. In light mode the
-   ring/icon defaults to white — needs to be teal on off-white.
+   HERO CARD ICONS (kb-feature-card)
+   Icons use CSS mask-image technique — the SVG is transparent
+   and the background-color behind the mask IS the icon color.
+   Class on SVG: svg.icon.inline.!bg-white.bg-gray-800
+   In light mode bg-gray-800 makes it near-black (invisible on
+   off-white). Override to teal #0D9488.
    ============================================================ */
 
-/* Icon ring container — light mode */
+html:not(.dark) .kb-feature-card svg.icon {
+  background-color: #0D9488 !important;
+}
+
 html:not(.dark) .kb-feature-card {
   background-color: #FFFFFF;
   border-color: #E5E7EB;
 }
 
-html:not(.dark) .kb-feature-card svg {
-  color: #0D9488;
-  stroke: #0D9488;
-}
-
 html:not(.dark) .kb-feature-card [class*='ring'] {
-  --tw-ring-color: #E5E7EB;
   background-color: rgba(13, 148, 136, 0.06);
+  --tw-ring-color: #E5E7EB;
 }
 
-/* Icon ring container — dark mode */
-html.dark .kb-feature-card svg {
-  color: #0D9488;
-  stroke: #0D9488;
-}
-
-html.dark .kb-feature-card [class*='ring'] {
-  background-color: rgba(13, 148, 136, 0.1);
+/* Dark mode — keep icon visible */
+html.dark .kb-feature-card svg.icon {
+  background-color: #0D9488 !important;
 }
 
 /* ============================================================
-   EXPLORE BY TOPIC CARDS (mint-group) — preserve teal icons
-   These already render correctly. Keeping explicit rules to
-   protect against future CSS resets.
+   EXPLORE BY TOPIC CARDS (mint-group)
+   Same mask-image icon technique. bg-gray-800 in light mode.
+   Already rendering correctly per screenshot — explicit rule
+   to lock it in.
    ============================================================ */
+
+html:not(.dark) a.mint-group svg.icon,
+html:not(.dark) div.mint-group svg.icon {
+  background-color: #0D9488 !important;
+}
 
 html:not(.dark) a.mint-group,
 html:not(.dark) div.mint-group {
