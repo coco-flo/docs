@@ -4,7 +4,9 @@
   "name": "Clarely Help Center",
   "description": "Help documentation for Clarely — the quote-to-paid platform for service businesses.",
   "colors": {
-    "primary": "#0D9488"
+    "primary": "#0D9488",
+    "light": "#0D9488",
+    "dark": "#0D9488"
   },
   "favicon": "https://oezlbnejpidvvdzuxoej.supabase.co/storage/v1/object/public/clarely-public-assets/brand/clarely-favicon-32px.png",
   "logo": {
