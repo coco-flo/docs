@@ -1,5 +1,5 @@
 <Info>
-  **Clarely Internal — Decisions** · Access via direct link only. Last reviewed: May 2026. [Back to Internal Hub](/r7-hub)
+  **Clarely Internal — Decisions** · Last reviewed: May 2026 · Access via direct link only.
 </Info>
 
 Authoritative record of billing policy decisions. Add entries with date and rationale. Do not remove old decisions — mark superseded if replaced.
@@ -10,36 +10,34 @@ Authoritative record of billing policy decisions. Add entries with date and rati
 
 ## Founder Rate
 
-**Pricing** — May 2026. \$20/month, Business-tier feature access, "for as long as Clarely operates this plan." Internal Stripe product, not visible in customer portal. Displays as "Founder" in all in-product UI.
+**Pricing** — May 2026. \$20/month, Business-tier feature access, "for as long as Clarely operates this plan."
 
-**Free period** — May 2026. 6 months free before billing starts. No credit card required during free period. Billing begins automatically at month 6 via Stripe subscription.
+**Free period** — May 2026. 6 months free before billing starts. No credit card required during free period.
 
-**Survey compliance** — May 2026. 80% (5 of 6 monthly surveys) required to retain Founder Rate at month 6. Non-compliant founders revert to standard pricing after 7-day grace period and personal outreach.
+**Survey compliance** — May 2026. 80% (5 of 6 monthly surveys) required to retain Founder Rate at month 6.
 
-**On return after cancellation** — May 2026. Founder Rate does not automatically reinstate. Returning founders are offered standard pricing. Case-by-case exceptions at founder discretion.
+**On return after cancellation** — May 2026. Founder Rate does not automatically reinstate. Returning founders offered standard pricing.
 
-**Upgrade requests** — May 2026. Founders cannot upgrade beyond Founder Rate. Fixed at Business-tier access. Log requests and route to Prod for roadmap consideration.
+**Upgrade requests** — May 2026. Fixed at Business-tier access. Log requests and route to Prod.
 
 ---
 
 ## Free Forever Cohort
 
-**Definition** — May 2026. A second cohort variant for close contacts or specific cases where no payment is expected. Accounts placed directly on the `free` plan with `is_early_adopter = true`. No Stripe subscription created. See [Free Forever variant](/r7-hub/founder-program/free-forever-variant) for full details.
+**Definition** — May 2026. Accounts placed directly on the `free` plan with `is_early_adopter = true`. No Stripe subscription created.
 
-**Survey participation** — May 2026. Free Forever founders participate in the 6-month survey cadence on the same schedule. Non-compliance does not affect billing (no billing exists) but is tracked for product feedback purposes.
+**Survey participation** — May 2026. Same 6-month cadence. Non-compliance tracked for feedback purposes only.
 
 ---
 
 ## Annual Billing
 
-**2 months free on all paid tiers** — May 2026.
-
 | Tier | Monthly | Annual | Saving |
 | --- | --- | --- | --- |
-| Starter | \$15/mo | \$150/yr | \$30 — 2 months free |
-| Professional | \$29/mo | \$290/yr | \$58 — 2 months free |
-| Team | \$49/mo | \$490/yr | \$98 — 2 months free |
-| Business | \$79/mo | \$790/yr | \$158 — 2 months free |
+| Starter | \$15/mo | \$150/yr | \$30 |
+| Professional | \$29/mo | \$290/yr | \$58 |
+| Team | \$49/mo | \$490/yr | \$98 |
+| Business | \$79/mo | \$790/yr | \$158 |
 
 Founder Rate is monthly only. No annual variant.
 
@@ -47,38 +45,32 @@ Founder Rate is monthly only. No annual variant.
 
 ## Payment Failure and Dunning
 
-**First failure** — May 2026. Stripe handles retry automatically. Do not intervene unless founder contacts support. Stripe default retry schedule: day 1, 3, 5, 7 after initial failure.
+**First failure** — Stripe handles retry automatically. Retry: day 1, 3, 5, 7.
 
-**Repeated failures (3\+)** — May 2026. Reach out directly via the founder group channel. Offer to update payment method. If unresolved after 7 days, suspend account access via Heimdall. Communicate suspension reason clearly.
+**Repeated failures (3\+)** — Reach out directly. If unresolved after 7 days, suspend in Heimdall.
 
-**Grace period** — May 2026. 7 days from final failed retry attempt, with direct outreach at day 3.
+**Grace period** — 7 days from final failed retry, outreach at day 3.
 
 ---
 
 ## Disputes and Refunds
 
-**Stripe subscription dispute** — May 2026. Applies to Clarely plan billing disputes only. Submit Stripe invoice as primary evidence immediately — Stripe dispute window is typically 7 days. Do not wait.
+**Stripe subscription dispute** — Submit Stripe invoice as evidence immediately. 7-day window.
 
-**Duplicate charge** — May 2026. Issue full refund via Stripe dashboard immediately. No waiting period.
+**Duplicate charge** — Full refund via Stripe dashboard immediately.
 
-**General refunds** — May 2026. No published policy. Handle case by case. Document all decisions here.
+**General refunds** — No published policy. Case by case. Document here.
 
 ---
 
 ## Plan Changes
 
-**Upgrades** — decided. Take effect immediately.
-
-**Downgrades** — decided. Take effect at end of current billing cycle. Data retained. Features above new tier become unavailable at next billing date.
-
-**Cancellation** — decided. Account moves to Free plan at end of billing period. All data retained. No automatic deletion.
-
-**Data on cancellation** — decided. Customer data retained indefinitely after cancellation unless owner requests deletion. Suspension for non-payment does not delete data — it blocks login until resolved, or until the 12-month suspension-to-purge timeline is reached.
+**Upgrades** — Immediate. **Downgrades** — End of billing cycle. **Cancellation** — Moves to Free at end of period. Data retained indefinitely.
 
 ---
 
 ## Pending Decisions
 
 - Accounting treatment for Clarely LLC \+ Scrub Hub Crew — pending accountant (OPS-5)
-- Quarterly estimated tax payment schedule — pending accountant
+- Quarterly estimated tax — pending accountant
 - Formal refund policy — deferred post-launch
