@@ -1,51 +1,78 @@
----
-title: "Cohort Tracker Guide"
-description: "How to use and maintain the Clarely founder cohort tracker spreadsheet."
-hidden: true
-noindex: true
----
-
 <Warning>
   Internal document. Not publicly linked or indexed.
 </Warning>
 
 ## File location
 
-Clarely_Founder_Cohort_Tracker.xlsx — stored in the Claude project library and available for download from outputs.
+Clarely\_Founder\_Cohort\_Tracker.xlsx stored in the Claude project library.
 
-## Columns
+## Column reference
 
 | Column | Description |
-|---|---|
+| --- | --- |
 | Founder # | Sequential ID |
 | Name | Full name |
 | Business name | Business they operate |
 | Email | Account email |
+| CLR account number | From Heimdall, format CLR-XXXX |
 | Business type | Cleaning / Trades / Professional services / Other |
-| Business size | Solo / Small (1–3) / Mid (4–15) |
-| Batch | 1–4 |
-| Plan | founder / free |
+| Business size | Solo / Small (1-3) / Mid (4-15) |
+| Cohort type | Founder Rate / Free Forever |
+| Batch | 1-4 |
+| Plan | business / free / free-forever |
 | Start date | Account creation date |
-| Status | Active / Cancelled / Converted |
-| Month 1–6 surveys | Y/N per survey |
+| Status | Active / Non-responsive / Cancelled / Converted / Free-keeping |
+| Months 1-6 surveys | Y/N per survey |
 | Compliance count | Auto-calculated from survey columns |
 | Compliant | Y/N (auto-calculated, threshold 5/6) |
+| Month 5 outreach | Y/N - was conversion conversation started? |
+| Month 6 outcome | Converted / Reverted / Free-keeping / Cancelled |
 | Notes | Free text |
 
-## Auto-calculated fields
+## When to update the tracker
 
-The spreadsheet automatically calculates:
-- Compliance count (sum of Y responses across month 1–6)
-- Compliant flag (Y if count >= 5, N otherwise)
-- Cohort composition counts by type and size
+**At acceptance:** Add row with all known fields. Status = Active. Start date = account creation date. Leave survey columns empty.
 
-## Adding a new founder
+**Each month:** After each survey window closes (allow 7-day response window), mark Y or N for that month. Update notes with anything notable from that founder's engagement.
 
-1. Add a row with all known fields at acceptance
-2. Set Status to Active
-3. Set Start date to account creation date
-4. Update survey columns as responses come in
+**At month 5:** Mark Month 5 outreach column Y once conversion conversation begins. Note outcome in Notes.
+
+**At month 6:** Run compliance audit. Update Compliant column. Set Month 6 outcome. If reverting to standard pricing, note date and outreach sent.
+
+**On churn or cancellation:** Update Status to Cancelled. Note date and reason in Notes.
+
+## Running the month 6 compliance audit
+
+1. Sort tracker by Start Date. Find all founders where Start Date \+ 180 days is today or earlier.
+2. For each: count Y responses across Month 1-6 survey columns.
+3. Founders with 5\+ responses: Compliant = Y. No action required.
+4. Founders with 4 or fewer responses: Compliant = N. Initiate personal outreach before taking any billing action.
+5. Allow 7-day grace period after outreach.
+6. If no resolution: revert to standard pricing in Heimdall.
+
+Personal outreach message for non-compliant founders:
+
+> "\[Name\], I'm doing the 6-month check-in for the Founder Program. You responded to \[X\] of 6 surveys, and the threshold to keep the Founder Rate is 5. I want to reach out personally before making any change. Is there anything that got in the way? I'd rather hear from you than just flip a switch."
+
+## Handling non-responsive founders
+
+If a founder misses 2 consecutive surveys and can't be reached in the group channel:
+
+1. Try email directly to their account email.
+2. If still no response after 2 weeks, mark Status as Non-responsive in the tracker.
+3. Continue sending surveys. Don't remove them from the program.
+4. At month 6, apply normal compliance audit.
+
+Don't escalate a non-responsive founder to cancelled unless they explicitly ask to leave or miss all 6 surveys.
 
 ## Reviewing cohort composition
 
 The summary section at the top of the tracker shows current counts by type and size against targets. Check before accepting new founders to avoid exceeding composition targets.
+
+## Triggering month 5 conversion outreach
+
+Month 5 is when personal conversion conversations begin in parallel with the survey. Don't wait for the survey response. Reach out directly:
+
+> "\[Name\], we're getting close to the end of the founder program. I wanted to touch base before the formal check-in. How has it been going? Are you planning to continue with Clarely after the 6 months?"
+
+The goal is to have a committed yes or no before month 6 closes. Note the conversation outcome in the tracker.

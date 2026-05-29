@@ -1,0 +1,78 @@
+---
+title: "Launch Checklist"
+description: "Pre-go-live checklist before the first founder invitation is sent."
+hidden: true
+noindex: true
+sidebarTitle: "Launch checklist"
+---
+
+<Warning>
+  Internal document. Not publicly linked or indexed.
+</Warning>
+
+All items below must be complete before sending the first founder invitation. This is a go/no-go gate, not a suggestion list.
+
+---
+
+## Legal and entity
+
+- OPS-1: Clarely LLC formed and approved
+- OPS-2: EIN obtained
+- OPS-3: Business bank account open
+- OPS-4: Stripe account updated to Clarely LLC entity
+- ToS Section 13 placeholders resolved (governing law: Florida, arbitration: Hillsborough County)
+
+## Product
+
+- Production smoke test complete: full core loop on a real account (signup, quote, send, client sign, job, invoice, payment handle display)
+- Email deliverability verified: SPF, DKIM, DMARC confirmed on Resend sending domain
+- PWA install verified on real iPhone and real Android
+- Push notifications tested on real device: notification fires when client signs
+- clarely.app accessible at production URL
+- CLA-6 shipped: `is_early_adopter` flag functional in Heimdall
+- CLA-8 shipped: Heimdall early adopter view operational
+- Regression test suite passing (TestSprite baseline clean)
+
+## Billing
+
+- Stripe Founder Rate product created (\$20/month, Business tier, hidden from portal)
+- Founder Rate Price ID mapped in app webhook handler
+- Annual billing products created for all paid tiers
+- Stripe webhook endpoint configured and verified
+- Stripe customer portal configured (view billing, update payment, cancel subscription)
+- Stripe dunning settings verified: retry enabled, customer failure emails enabled
+- OPS-5: Accounting platform configured and connected to Stripe
+
+## Support infrastructure
+
+- [support@clarely.co](mailto:support@clarely.co) inbox configured with Gmail send-as SMTP
+- Founder group channel platform decided and channel created
+- Tally.so bug report form live (OPS-6) with URL recorded here: \[INSERT\]
+- Tally.so feature request form live with URL recorded here: \[INSERT\]
+- Tally.so founder application form live (OPS-8) with URL recorded here: \[INSERT\]
+- Google Forms Month 1 survey built and tested
+- UptimeRobot monitoring active for clarely.app (5-minute interval, email alert)
+
+## Documentation
+
+- Public docs (docs.clarely.co) up to date and accurate
+- Internal docs reviewed and complete
+- Known issues log empty or all known issues documented in Linear
+
+## Heimdall
+
+- Heimdall accessible at heimdall.clargate.tools
+- Root account TOTP confirmed working
+- Account search functional
+- Plan change and is\_early\_adopter flag operational
+- Backup system showing green status
+
+## Cohort tracker
+
+- Clarely\_Founder\_Cohort\_Tracker.xlsx set up with correct structure
+- Batch 1 candidates identified (5 warm contacts)
+- Acceptance email templates finalized
+
+---
+
+When all items above are checked, send the first Batch 1 invitation.
