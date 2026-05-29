@@ -32,11 +32,12 @@ sidebarTitle: "Create a quote"
 | Draft | Created but not yet sent |
 | Sent | Sent to client, awaiting signature |
 | Accepted | Client has signed — scope is locked |
-| Declined | Client declined the quote |
+| Declined | Client or owner closed the quote without accepting |
+| Expired | Quote passed its expiry date without being signed |
 
 ## Editing a quote
 
-Quotes can only be edited while in **Draft** status. Once sent, the quote is locked for the client's review. If you need to make changes after sending, the cleanest option is to cancel the sent quote and create a new one with the updated details.
+Quotes can only be edited while in **Draft** status. Once sent, the quote is locked for the client's review. If you need to make changes after sending, tap **Mark as Declined** to close the sent quote, then create a new one with the updated details.
 
 Once a client signs (Accepted), the quote is permanently frozen — no edits are possible by anyone. See [Scope protection](/quotes/scope-protection).
 
