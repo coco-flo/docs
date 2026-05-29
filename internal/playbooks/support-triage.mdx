@@ -1,57 +1,100 @@
----
-title: "Support Triage Playbook"
-description: "How to handle founder support requests and route issues."
-hidden: true
-noindex: true
----
-
 <Warning>
   Internal document. Not publicly linked or indexed.
 </Warning>
 
 ## Support channels
 
-During the founder cohort period, support comes through:
-1. **Founder group channel** (WhatsApp/iMessage/Signal — TBD) — primary channel for urgent issues
-2. **Tally support form** (OPS-6) — structured bug reports
-3. **Email to support@clarely.co** — fallback
+| Channel | Purpose | URL/Status |
+| --- | --- | --- |
+| Founder group channel | Real-time bugs, questions, quick feedback | Platform: \[DECIDE AND UPDATE\] |
+| Bug report form (Tally) | Structured bug reports with full detail capture | URL: \[INSERT after OPS-6\] |
+| Feature request form (Tally) | Enhancement and feature ideas | URL: \[INSERT after OPS-7\] |
+| Email | Fallback for anything else | [support@clarely.co](mailto:support@clarely.co) |
+
+**Priority note:** The founder group channel is the fastest path during the cohort period. Tally forms are for structured capture when a bug needs full reproduction steps.
 
 ## Triage decision tree
 
-**Is it a bug (app not working as expected)?**
-- Yes → Create CLA- issue in Linear (App or Heimdall label), Priority: Urgent if blocking a workflow, High otherwise. Acknowledge the founder within 2 hours.
-- No → Continue
+**Is the app broken or not working as expected?**
 
-**Is it a how-to question (founder doesn't know how to do something)?**
-- Yes → Answer directly from documentation if covered. If not covered, answer and create a new doc page (route to BizOps for Mintlify update).
-- No → Continue
+- Yes: Create CLA- issue in Linear (App or Heimdall label). Priority: Urgent if blocking a core workflow (can't send quote, can't sign, can't invoice). High otherwise. Acknowledge the founder within 2 hours.
+- No: Continue.
+
+**Is it a how-to question?**
+
+- Yes: Answer directly. Link to docs.clarely.co if covered. If not covered, answer and create a doc update task (route to BizOps).
+- No: Continue.
 
 **Is it a billing or account issue?**
-- Yes → Handle directly. Check Stripe for payment status. Check Heimdall for account status. Do not escalate — resolve at Cody level.
-- No → Continue
 
-**Is it a feature request or enhancement idea?**
-- Yes → Log it. Thank the founder. Create OPS issue or CLA issue with Founder Feedback label. Route to Prod chat for roadmap consideration.
+- Yes: Handle directly. Check Stripe for subscription/payment status. Check Heimdall for account status and plan. Do not escalate. Resolve at founder level.
+- No: Continue.
+
+**Is it a feature request or enhancement?**
+
+- Yes: Log it. Thank the founder. Create CLA- issue with Founder Feedback label. Route to Prod chat for roadmap consideration. Do not commit to timelines.
+- No: Continue.
+
+**Is it a third-party service issue (Venmo, Cash App, Zelle, their email provider)?**
+
+- Yes: Acknowledge the frustration. Clarify what you can and can't control. Provide workarounds if available (e.g., "If Venmo isn't working for them, try Cash App or have them Zelle instead"). You cannot fix third-party services.
 
 ## Response time targets
 
-| Priority | Target first response |
-|---|---|
-| App broken / can't work | 2 hours |
+| Situation | Target first response |
+| --- | --- |
+| App broken, can't work | 2 hours |
 | Major workflow blocked | 4 hours |
 | General question | 24 hours |
 | Feature request | Acknowledge within 48 hours |
 
+## Template responses
+
+**Bug acknowledged, investigating:**
+
+> "On it. I can reproduce this on my end. I'll have an update for you within \[timeframe\]."
+
+**Bug fixed:**
+
+> "This is fixed. Let me know if you see it again."
+
+**Bug logged, not yet prioritized:**
+
+> "Logged in our issue tracker with high priority. I'll follow up once it's fixed. Thanks for the detail."
+
+**Feature request acknowledged:**
+
+> "Good idea. Logged. This isn't in the immediate roadmap but I want to capture it. I'll follow up if and when it's scoped."
+
+**How-to question with docs link:**
+
+> "\[Answer\]. More detail here: \[link to specific doc page\]."
+
+**Third-party issue:**
+
+> "That's a \[Venmo/Cash App/Zelle\] issue outside of Clarely's control. As a workaround, \[suggestion\]. If you keep having trouble with one method, consider setting up a second payment handle as backup."
+
+**Account/billing question:**
+
+> "Looking into this now. I'll check the account on our end and follow up shortly."
+
 ## Linear issue creation from support
 
-Every bug report from a founder becomes a CLA- issue. Include:
+Every bug from a founder becomes a CLA- issue. Include:
+
 - Founder name (in description, not title)
 - Steps to reproduce
 - Expected vs actual behavior
 - Device and OS
 - Founder Feedback label
-- Link to the Tally form submission if applicable
+- Link to Tally form submission if available
 
 ## Known issues log
 
-Maintain a running note of open known issues to acknowledge quickly in future reports. Update after each CLA- issue is closed.
+Maintain below. Update when CLA- issues are closed. Acknowledge quickly when a founder reports something already logged.
+
+| Issue | CLA- link | Status | Reported by |
+| --- | --- | --- | --- |
+| Quote settings not persisting on creation (tax, acceptance flow, deposit) | CLA-90 | Open | TestSprite baseline |
+| Public invoice token resolution failure | CLA-91 | Open | TestSprite baseline |
+| Owner-side Mark as Declined missing from Sent quote | CLA-92 | Open | TestSprite baseline |

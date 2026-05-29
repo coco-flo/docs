@@ -1,0 +1,87 @@
+---
+title: "Founder Onboarding Checklist"
+description: "Step-by-step process after a founder accepts and before they're active."
+hidden: true
+noindex: true
+sidebarTitle: "Onboarding checklist"
+---
+
+<Warning>
+  Internal document. Not publicly linked or indexed.
+</Warning>
+
+Complete every step in order before considering a founder fully onboarded. This process runs once per founder.
+
+## Step 1: Account creation
+
+- Provide signup link: `clarely.app/signup`
+- OR create account manually in Clarely if founder prefers
+- Confirm account is created and email is verified
+
+## Step 2: Heimdall configuration
+
+- Open Heimdall and find the account by email
+- Set plan:
+  - Founder Rate cohort: `business`
+  - Free Forever cohort: `free`
+- Set `is_early_adopter = true` _(requires CLA-6 to be shipped — check status before running)_
+- Set `trial_ends_at` to a date 5\+ years in the future to exclude from trial expiry cron
+- Confirm CLR account number assigned — note it in the cohort tracker
+
+## Step 3: Cohort tracker update
+
+- Open Clarely\_Founder\_Cohort\_Tracker.xlsx
+- Add row or update existing row:
+  - Status: Active
+  - Start date: today
+  - Plan type: Founder Rate or Free Forever
+  - Batch: current batch number
+  - CLR account number
+- Confirm cohort composition targets still met
+
+## Step 4: Welcome message
+
+Send this message via the founder group channel or email:
+
+---
+
+\[First name\], your account is live.
+
+Here's what you need to know:
+
+**App URL:** clarely.app — open this in Safari (iPhone) or Chrome (Android) and add it to your home screen. This is how you'll get notifications when clients sign.
+
+**Your account:** You're on \[Business/Free\] access. \[If Founder Rate: You have full access to every feature.\]
+
+**Getting started:** The help docs are at docs.clarely.co. "Send your first quote" is the best place to start if you haven't used Clarely before.
+
+**Bugs and questions:** Reply here or email [support@clarely.co](mailto:support@clarely.co). If something isn't working, tell me directly — no ticket system, no bot.
+
+**Monthly surveys:** I'll send a short survey each month starting \[Month 1 date\]. 5 minutes, direct questions. Your responses keep your Founder Rate.
+
+Thanks for being part of this.
+
+Cody
+
+---
+
+## Step 5: Group channel
+
+- Add founder to the founder group channel (platform: \[INSERT PLATFORM once decided\])
+- Confirm they can see and post in the channel
+
+## Step 6: Calendar reminders
+
+- Set calendar reminder: Month 1 survey due — \[Start date \+ 30 days\]
+- Set calendar reminder: Month 5 conversion outreach — \[Start date \+ 150 days\]
+- Set calendar reminder: Month 6 compliance audit — \[Start date \+ 180 days\]
+
+## Step 7: Stripe (Founder Rate only)
+
+- Confirm Stripe Founder Rate subscription is set up or scheduled to start at month 6
+- Verify subscription is set to the Founder Rate price ID (stored in Bitwarden)
+- Confirm no charge fires during the 6-month free period
+
+## Done
+
+Founder is onboarded when all steps above are checked. Move on to the next batch applicant if slots remain.

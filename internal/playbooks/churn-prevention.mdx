@@ -1,0 +1,88 @@
+---
+title: "Churn Prevention"
+description: "Early warning signals, intervention approaches, and retention conversation guide."
+hidden: true
+noindex: true
+sidebarTitle: "Churn prevention"
+---
+
+<Warning>
+  Internal document. Not publicly linked or indexed.
+</Warning>
+
+## Why this matters
+
+At 25 founders, every person matters. Losing one is a 4% churn rate. Losing three is a real product signal. The goal isn't to pressure people to stay - it's to catch fixable problems before they become cancellations, and to learn from the ones that aren't fixable.
+
+## Early warning signals
+
+**Usage signals:**
+
+- Hasn't sent a quote in 4\+ weeks after being previously active
+- App login frequency dropping significantly
+- Not completing jobs or invoicing after creating quotes
+- Not using team members despite being set up
+
+**Engagement signals:**
+
+- Missing 2\+ consecutive monthly surveys without reaching out
+- Going quiet in the group channel after previously being active
+- Short or disengaged survey responses ("fine" / "no feedback")
+- Not responding to follow-up messages within 48 hours
+
+**Explicit signals:**
+
+- Mentions switching to another tool
+- Complains about a specific missing feature multiple times
+- Asks about pricing more than once
+- Says they're "too busy" to continue using it
+
+## How to intervene early
+
+Don't wait for month 6 to have retention conversations. The goal is to intervene when there's still time to fix something.
+
+**For usage drops:**
+
+> "\[Name\], I noticed you haven't sent a quote recently. Everything okay? Is there something that got in the way of using Clarely, or is it just a slow period for business?"
+
+Listen first. If it's a product problem, fix it or explain the roadmap. If it's a business slow period, acknowledge it and stay in touch.
+
+**For survey non-response:**
+
+> "\[Name\], I saw you haven't had a chance to fill out the \[Month X\] survey. No pressure - just want to make sure you're getting value from Clarely and nothing is broken. How's it going?"
+
+**For repeated feature requests:**
+
+> "You've mentioned \[feature\] a few times and I want to be direct with you: it's on the roadmap but not in the immediate next release. If that feature is important enough to affect whether you keep using Clarely, I want to know that now rather than at month 6."
+
+## The retention conversation
+
+When a founder signals they're considering leaving:
+
+1. **Ask before pitching.** "What's driving that?" Find out the real reason before responding.
+2. **Don't make promises you can't keep.** If a feature isn't coming soon, say so honestly. "That's not in the near-term roadmap" is better than over-promising.
+3. **Separate product problems from fit problems.** A founder who needs a feature that Clarely doesn't have is a different situation from a founder who just stopped using it. Product problems might be fixable. Fit problems probably aren't.
+4. **If it's a bug or UX issue:** Fix it and tell them. "That was a real problem and here's what I did to address it" is a strong retention message.
+5. **If they're leaving anyway:** Ask for a brief conversation about why. "I'm not going to try to talk you out of it. I'd just like to understand what Clarely was missing for you. It'll help me build it better."
+
+## When a founder churns
+
+1. Update the cohort tracker: Status = Cancelled, date, reason
+2. If they're on Founder Rate: cancel the Stripe subscription or remove billing at the appropriate time
+3. If they're on Free Forever: no billing action needed
+4. Create a CLA- or OPS- issue with Founder Feedback label documenting the reason for churn
+5. Data is retained - no deletion unless they request it
+6. Send a brief exit message:
+   > "\[Name\], I've updated your account. Your data is still there if you ever want to come back. Thanks for the time you gave to the program - the feedback mattered."
+
+## Learning from churn
+
+After every churn, answer these questions and add to the notes field in the cohort tracker:
+
+1. What was the stated reason for leaving?
+2. What was the real reason (based on survey data, usage patterns, conversations)?
+3. Was this preventable? If so, what would have prevented it?
+4. Does this point to a product gap, a communication failure, or a fit problem?
+5. Is this the same pattern as any previous churn?
+
+If the same reason appears 3\+ times, it's a product or positioning issue that needs to go to Prod.

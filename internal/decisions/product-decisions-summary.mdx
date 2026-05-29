@@ -1,47 +1,127 @@
----
-title: "Product Decisions Summary"
-description: "Summary of key locked product decisions for Clarely."
-hidden: true
-noindex: true
----
-
 <Warning>
-  Internal document. Not publicly linked or indexed. Authoritative source is the Clarely Product Decisions Log in the project library.
+  Internal document. Not publicly linked or indexed. Authoritative source for strategy and history is the Clarely Product Decisions Log in the Claude project library. This document is the operational quick-reference.
 </Warning>
 
-This is a summary reference. The full authoritative record lives in the Clarely_Product_Decisions_Log in the Claude project library. When in doubt, defer to that document.
+## Core identity (locked)
 
-## Locked decisions
+**Hero headline:** Stop running your business over text.
 
-**Hero headline:** "Stop running your business over text."
-**Tagline:** "From quote to paid. Total clarity."
-**Sub-copy:** "Your client signs the scope. You get paid."
+**Tagline:** From quote to paid. Total clarity.
 
-**ICP:** Trade-neutral from day one. No vertical excluded.
+**Sub-copy:** Your client signs the scope. You get paid.
+
+**ICP:** Trade-neutral. Any solo or small service business owner. No vertical excluded at launch.
 
 **Core differentiator:** Legally binding digital signatures with frozen scope protection. No competitor at any price point offers this.
 
-**Two-workflow structure:**
-- Field service: Quote → Job → Invoice
-- Professional services: Quote → Invoice on acceptance (toggle)
+---
 
-**Pricing tiers (monthly):**
-- Free: $0
-- Starter: $15
-- Professional: $29
-- Team: $49
-- Business: $79
-- Annual: 2 months free
+## Pricing tiers (locked)
 
-**Terminology (locked):** "business owner," "team member," "schedule"
+| Plan | Monthly | Annual | Notes |
+| --- | --- | --- | --- |
+| Free | \$0 | — | 100 quotes/mo cap, 50 client cap |
+| Starter | \$15/mo | \$150/yr | Core quoting \+ invoicing |
+| Professional | \$29/mo | \$290/yr | Reminders, follow-up advanced, recurring |
+| Team | \$49/mo | \$490/yr | Team members, iCal, data export |
+| Business | \$79/mo | \$790/yr | Metrics, AI, SMS, remove branding |
+| Founder | \$20/mo | — | Business-tier access, internal only |
+| Trial | 45 days | — | All features except AI quote assist |
 
-**Founder Rate:** $20/month, Business-tier access, "for as long as Clarely operates this plan"
+Annual billing = 2 months free on all paid tiers.
+
+---
+
+## Full feature matrix (locked)
+
+| Feature | Free | Starter | Prof | Team | Biz | Trial |
+| --- | --- | --- | --- | --- | --- | --- |
+| Quotes per month | 100 cap | Unlimited | ✓ | ✓ | ✓ | Unlimited |
+| Active clients | 50 max | Unlimited | ✓ | ✓ | ✓ | Unlimited |
+| Quote shareable link | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
+| Email quote delivery | — | ✓ | ✓ | ✓ | ✓ | ✓ |
+| Digital signature | — | ✓ | ✓ | ✓ | ✓ | ✓ |
+| Contract terms | — | ✓ | ✓ | ✓ | ✓ | ✓ |
+| Email notifications | — | ✓ | ✓ | ✓ | ✓ | ✓ |
+| Schedule | — | ✓ | ✓ | ✓ | ✓ | ✓ |
+| Invoice generation and sending | — | ✓ | ✓ | ✓ | ✓ | ✓ |
+| Acceptance flow toggle | — | ✓ | ✓ | ✓ | ✓ | ✓ |
+| Net terms | — | ✓ | ✓ | ✓ | ✓ | ✓ |
+| Tax rate | — | ✓ | ✓ | ✓ | ✓ | ✓ |
+| Quote follow-up basic (on/off) | — | ✓ | ✓ | ✓ | ✓ | ✓ |
+| Quote follow-up advanced (configurable) | — | — | ✓ | ✓ | ✓ | ✓ |
+| Automated invoice reminders | — | — | ✓ | ✓ | ✓ | ✓ |
+| Expense tracking (coming soon) | — | — | ✓ | ✓ | ✓ | ✓ |
+| Recurring jobs | — | — | ✓ | ✓ | ✓ | ✓ |
+| Quote templates (coming soon) | — | — | ✓ | ✓ | ✓ | ✓ |
+| iCal sync | — | — | — | ✓ | ✓ | ✓ |
+| Team member accounts | — | — | — | ✓ | ✓ | ✓ |
+| Data export | — | — | — | ✓ | ✓ | ✓ |
+| Metrics dashboard | — | — | — | — | ✓ | ✓ |
+| AI quote assist | — | — | — | — | ✓ | — |
+| SMS notifications | — | — | — | — | ✓ | ✓ |
+| Remove Clarely branding | — | — | — | — | ✓ | ✓ |
+
+---
+
+## Two-workflow structure (locked)
+
+**Flow A — Field service (default):** Quote → client signs → job auto-created → schedule job → complete job → invoice generated → payment collected. Use for: cleaning, trades, maintenance, landscaping, any on-site work.
+
+**Flow B — Professional services:** Quote → client signs → invoice auto-created and sent. No job step. Use for: consulting, design, remote work, any deliverable-based work.
+
+The toggle between flows is set per quote. Default is configurable per account. Flow A is the system default.
+
+---
+
+## Settings architecture (locked)
+
+8 sections in Settings. Mobile: home screen list of tappable rows. Desktop: persistent left sidebar.
+
+| Section | Key contents |
+| --- | --- |
+| Business | Name, slug (staff portal URL), logo, address, phone, payment handles (Venmo/Cash App/Zelle), payment notes |
+| Quoting | Tax rate, contract terms, acceptance flow default, quote expiry, deposit default, follow-up |
+| Invoicing | Net terms, auto-invoice toggle, invoice reminders, late fee, footer text |
+| Notifications | Email and SMS toggles (SMS is Business\+) |
+| Schedule | Default job duration, calendar hours, iCal token (Team\+) |
+| Team | Team member list, invite, disable |
+| Export | 8 export types (Team\+ plan) |
+| Account | Profile, password, plan/billing, referral (Starter\+), account deletion |
+
+Settings sections below plan tier are **locked with upgrade prompt, never hidden**.
+
+---
+
+## Staff portal (locked)
+
+Team members do not use clarely.app. They log in via a staff portal at `clarely.app/[business-slug]`. Authentication is email \+ 6-digit OTP sent per session. Sessions last 10 hours. No password. Team members see only their assigned jobs.
+
+---
+
+## Terminology (locked)
+
+| Term | Use |
+| --- | --- |
+| Business owner | The Clarely customer |
+| Team member | An employee/contractor on the owner's account |
+| Schedule | The job calendar section |
+| Client | The business owner's customer |
+
+Never use: operator, staff, field worker.
+
+---
+
+## CLR account numbers
+
+Every Clarely account has a sequential CLR account number (CLR-0001, CLR-0002, etc.) shown in Heimdall and on the account detail page. Used for support identification. Cannot be changed.
+
+---
 
 ## Post-launch roadmap (confirmed order)
 
-- v1.1: Expense Tracking (pending Prod confirmation)
-- v1.2+: Data export, account deletion, admin panel, branding toggle
+1. v1.1 — Expense tracking (ships as Professional feature, schema exists at launch)
+2. v1.2\+ — Quote templates, data export improvements, branding toggle
+3. v2.0\+ — AI quote assist (Business), metrics dashboard, SMS notifications
 
-## Out of scope (deferred)
-
-All features not listed above are deferred post-launch. Do not scope, promise, or build until the relevant version milestone is confirmed by Prod.
+Do not scope, promise, or build features not listed here until the relevant milestone is confirmed by Prod.

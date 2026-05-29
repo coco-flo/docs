@@ -1,10 +1,3 @@
----
-title: "Founder Issue Escalation"
-description: "When and how to escalate founder issues beyond standard triage."
-hidden: true
-noindex: true
----
-
 <Warning>
   Internal document. Not publicly linked or indexed.
 </Warning>
@@ -13,29 +6,60 @@ noindex: true
 
 These situations require immediate attention beyond standard triage:
 
-**Data loss or corruption**
-A founder reports missing quotes, jobs, or invoices. Stop normal operations. Check Supabase directly for the account. Escalate to AppDev immediately via Linear (Urgent priority). Communicate to founder within 1 hour with status update.
+**Data loss or corruption** — A founder reports missing quotes, jobs, invoices, or signed scope data. Stop normal operations. Open Heimdall and check the account directly. If data is genuinely missing, escalate to AppDev immediately via Linear (Urgent priority). Communicate to the founder within 1 hour with a status update.
 
-**Payment processed but not recorded**
-Founder paid an invoice but it still shows as unpaid. Check Stripe for the transaction immediately. If Stripe shows paid, resync manually and update the invoice status. If Stripe does not show the payment, investigate with Stripe support.
+**Signed quote data missing or corrupted** — The most critical issue type. A signed quote's frozen scope is a legal record. If the snapshot is missing or the signature data is gone, it's both a product bug and a legal issue. Escalate to AppDev immediately with Urgent priority. This takes priority over everything else.
 
-**Account inaccessible**
-Founder cannot log in. Check Supabase Auth for the account. Reset may be required. Resolve within 2 hours.
+**Account inaccessible** — Founder cannot log in and it's not a simple forgotten password. Check Supabase Auth for the account status. Check Heimdall for account suspension status. Reset or reactivate within 2 hours.
 
-**Signed quote data missing**
-The most critical issue type. A signed quote's scope is legally binding — if the frozen snapshot is missing or corrupted, it's a serious product and legal issue. Escalate to AppDev immediately with Urgent priority.
+**Clarely subscription payment issue** — A founder's Clarely plan payment failed or was charged incorrectly. Check Stripe for subscription and payment status. Resolve at founder level. See billing-edge-cases for specific scenarios. Note: this is about Clarely subscription billing, not client payments via Venmo/Cash App/Zelle.
+
+**App completely down** — clarely.app is inaccessible for multiple users. Check UptimeRobot alert. Check Supabase status page. Post immediately in the founder group channel. Escalate to AppDev.
+
+---
 
 ## Communication during escalation
 
-Keep the founder informed at every step. If you don't have a resolution, acknowledge the issue and give a timeline for the next update. Silence is worse than bad news.
+Communicate at every step. Silence is worse than bad news.
 
-Template for acknowledgment:
-> "I see the issue — this is on my radar and I'm working on it now. I'll have an update for you within [timeframe]."
+**Initial acknowledgment (send within 1 hour of escalation trigger):**
 
-## Post-resolution
+> "I see the issue. This is on my radar and I'm working on it now. I'll have an update for you within \[timeframe\]."
+
+**Progress update (if no resolution within the initial timeframe):**
+
+> "Still working on \[issue\]. Current status: \[brief status\]. Next update by \[time\]. I haven't forgotten about you."
+
+**Resolution communication:**
+
+> "This is resolved. Here's what happened: \[brief explanation\]. Here's what I did to fix it: \[action taken\]. Let me know if you see anything else."
+
+**If issue cannot be fully resolved immediately:**
+
+> "I have a partial fix in place. \[What's working now\]. The remaining part is \[what's still outstanding\] and I expect to have it resolved by \[date\]. I'll follow up."
+
+---
+
+## Post-resolution process
 
 After any escalated issue is resolved:
-- Update the Linear issue with resolution notes
-- Document the root cause in the issue
-- Identify if a doc needs to be created or updated
-- Consider whether a product fix is needed to prevent recurrence
+
+1. Update the Linear issue with full resolution notes and root cause
+2. Update the known issues log in the support-triage playbook if applicable
+3. Identify if a doc page needs to be created or updated (route to BizOps)
+4. Assess whether a product fix is needed to prevent recurrence. If yes, create a follow-up CLA- issue.
+5. Consider whether the affected founder deserves a goodwill gesture (account credit, extended trial time). Use judgment. Not every bug warrants compensation, but data loss or extended downtime does.
+
+---
+
+## Accessing Heimdall for account investigation
+
+During a support escalation involving account data:
+
+1. Open Heimdall at heimdall.clargate.tools
+2. Log in with super\_admin credentials (use Bitwarden)
+3. Search for the account by email or CLR account number
+4. Check: plan, trial status, suspension status, account dates
+5. For data questions: check Supabase directly (knhktxejotneileonrjq) if Heimdall doesn't show what you need
+
+Every action in Heimdall is audit-logged. You don't need to document separately what you did in Heimdall - the audit log captures it.
