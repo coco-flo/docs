@@ -1,18 +1,15 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "sequoia",
-  "name": "Clarely",
-  "description": "Help guides, product documentation, and support resources for Clarely users.",
+  "name": "Clarely Help Center",
+  "description": "Help documentation for Clarely — the quote-to-paid platform for service businesses.",
   "colors": {
-    "primary": "#0D9488",
-    "light": "#0D9488",
-    "dark": "#0D9488"
+    "primary": "#0D9488"
   },
-  "favicon": "/favicon.svg",
+  "favicon": "https://oezlbnejpidvvdzuxoej.supabase.co/storage/v1/object/public/clarely-public-assets/brand/clarely-favicon-32px.png",
   "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg",
-    "href": "https://clarely.co"
+    "light": "https://oezlbnejpidvvdzuxoej.supabase.co/storage/v1/object/public/clarely-public-assets/brand/clarely-horiz-dark@2x.png",
+    "dark": "https://oezlbnejpidvvdzuxoej.supabase.co/storage/v1/object/public/clarely-public-assets/brand/clarely-horiz-light@2x.png"
   },
   "icons": {
     "library": "lucide"
@@ -35,14 +32,20 @@
       {
         "header": "Product",
         "items": [
-          { "label": "Clarely.co", "href": "https://clarely.co" },
-          { "label": "Sign in", "href": "https://clarely.app" }
+          {
+            "label": "clarely.co",
+            "href": "https://clarely.co"
+          },
+          {
+            "label": "Help Center",
+            "href": "https://docs.clarely.co"
+          }
         ]
       },
       {
         "header": "Support",
         "items": [
-          { "label": "Contact support", "href": "mailto:support@clarely.co" }
+          { "label": "Contact Support", "href": "mailto:support@clarely.co" }
         ]
       }
     ]
@@ -186,5 +189,8 @@
         ]
       }
     ]
+  },
+  "metadata": {
+    "timestamp": false
   }
 }
