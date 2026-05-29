@@ -30,9 +30,17 @@ html:not(.dark) #sidebar-content {
   border-right: 1px solid #E5E7EB;
 }
 
-/* Navbar */
-html:not(.dark) #navbar {
-  background-color: #FFFFFF;
+/* Navbar / topbar — all possible selectors */
+html:not(.dark) #navbar,
+html:not(.dark) nav,
+html:not(.dark) header,
+html:not(.dark) #header,
+html:not(.dark) [id*='navbar'],
+html:not(.dark) [id*='topbar'],
+html:not(.dark) [class*='navbar'],
+html:not(.dark) [class*='topbar'],
+html:not(.dark) [class*='header'] {
+  background-color: #FFFFFF !important;
   border-bottom: 1px solid #E5E7EB;
 }
 
@@ -60,9 +68,14 @@ html.dark #sidebar-content {
   border-right: 1px solid rgba(255, 255, 255, 0.06);
 }
 
-/* Navbar */
-html.dark #navbar {
-  background-color: #0F1F1E;
+/* Navbar — dark mode */
+html.dark #navbar,
+html.dark nav,
+html.dark header,
+html.dark #header,
+html.dark [id*='navbar'],
+html.dark [id*='topbar'] {
+  background-color: #0F1F1E !important;
   border-bottom: 1px solid rgba(255, 255, 255, 0.06);
 }
 
@@ -130,12 +143,80 @@ a:hover {
 }
 
 /* ============================================================
+   CARD COMPONENTS — fix icon and background in light mode
+   ============================================================ */
+
+/* Card icon color — light mode */
+html:not(.dark) [class*='card'] svg,
+html:not(.dark) [class*='Card'] svg {
+  color: #0D9488;
+  fill: currentColor;
+}
+
+/* Card icon wrapper — light mode */
+html:not(.dark) [class*='card'] [class*='icon'],
+html:not(.dark) [class*='card'] [class*='Icon'] {
+  color: #0D9488;
+  background-color: rgba(13, 148, 136, 0.08);
+  border-radius: 6px;
+}
+
+/* Card surface — light mode */
+html:not(.dark) a[class*='card'],
+html:not(.dark) div[class*='card'] {
+  background-color: #FFFFFF;
+  border-color: #E5E7EB;
+}
+
+/* Card hover — light mode */
+html:not(.dark) a[class*='card']:hover,
+html:not(.dark) div[class*='card']:hover {
+  border-color: #0D9488;
+  box-shadow: 0 0 0 1px #0D9488;
+}
+
+/* Card icon — dark mode teal tint */
+html.dark [class*='card'] svg,
+html.dark [class*='Card'] svg {
+  color: #0D9488;
+}
+
+html.dark [class*='card'] [class*='icon'],
+html.dark [class*='card'] [class*='Icon'] {
+  background-color: rgba(13, 148, 136, 0.12);
+  border-radius: 6px;
+}
+
+/* ============================================================
    CALLOUT COMPONENTS
-   Info callout uses brand teal left border
    ============================================================ */
 
 [data-callout-type='info'] {
   border-left-color: #0D9488;
+}
+
+/* ============================================================
+   POWERED BY MINTLIFY — suppress watermark
+   ============================================================ */
+
+/* Target the "Powered by mintlify" link by its href */
+a[href*='mintlify.com'],
+a[href*='mintlify.com'] * {
+  display: none !important;
+}
+
+/* Also target the wrapper text node if it renders as a span */
+footer span:has(a[href*='mintlify.com']),
+#footer span:has(a[href*='mintlify.com']) {
+  display: none !important;
+}
+
+/* Broad fallback — any element containing "Powered by" in footer */
+#footer [class*='powered'],
+#footer [class*='Powered'],
+footer [class*='powered'],
+footer [class*='Powered'] {
+  display: none !important;
 }
 
 /* ============================================================
