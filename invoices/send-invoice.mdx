@@ -4,28 +4,37 @@ description: "Send an invoice to your client for payment."
 sidebarTitle: "Send an invoice"
 ---
 
-Once an invoice is generated, sending it takes one tap. Your client receives an email with a link to pay.
+Once an invoice is ready, sending it takes one tap. Your client receives an email with a secure link to view the invoice and your payment details.
 
 ## How to send
 
-From any draft invoice, tap **Send Invoice**. Clarely sends your client an email with a secure payment link.
+From any draft invoice, tap **Send Invoice**. Clarely sends your client an email from Clarely with a link to their invoice.
 
 ## What the client receives
 
-Your client gets an email with your business name, the invoice total, and a link to pay online. The payment page shows the full invoice with every line item.
+Your client gets an email with your business name and a single link to open the invoice. The link takes them to a page showing:
+
+- Your business name and logo
+- The invoice total and balance due
+- Your payment handles (Venmo, Cash App, Zelle) with tap-to-copy buttons
+- Any payment notes you've configured
+
+The email intentionally contains just the link — no line items are included in the email body. Everything is on the invoice page itself.
 
 ## Resending an invoice
 
-If your client needs the invoice resent, open the invoice and tap **Resend**. A new email goes to the same address.
+If your client needs the invoice resent, open the invoice and tap **Resend**. A new email goes to the same address on file.
 
-## Sending to a different email
+## Payment reminders
 
-If you need to send the invoice to a different email than the one on the quote, open the invoice, tap **Edit Client Email**, update the address, and send.
+Clarely can automatically remind clients about unpaid invoices. Configure reminder timing in **Account** → **Invoicing Defaults**. Once set up, reminders go out automatically — you don't need to track it manually.
 
-## Manual payment recording
+Reminders stop automatically when the invoice is marked paid.
 
-If your client pays by cash, check, or bank transfer outside of Clarely, you can mark the invoice as paid manually. Open the invoice and tap **Mark as Paid**. Enter the payment method and date.
+## Recording payment
+
+When a client pays, open the invoice and tap **Mark as Paid**. This updates your records and moves the invoice to **Paid** status once the full balance is received. See [Payment handling](/invoices/payment-handling) for details.
 
 <Note>
-  Manual payment marking does not process any funds — it only updates the invoice status in Clarely for your records.
+  Clarely doesn't process payments directly — payment happens between you and your client through the method they choose (Venmo, Cash App, Zelle, or other arrangement). Marking an invoice paid in Clarely is a record-keeping step, not a funds transfer.
 </Note>

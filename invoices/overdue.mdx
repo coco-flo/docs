@@ -4,28 +4,32 @@ description: "What happens when an invoice isn't paid on time."
 sidebarTitle: "Overdue invoices"
 ---
 
-An invoice becomes overdue when it passes its due date without being paid. Clarely flags overdue invoices so nothing slips through.
+An invoice becomes overdue when it passes its due date without being paid in full. Clarely flags overdue invoices in your list so nothing slips through.
 
 ## How overdue is determined
 
-Clarely marks an invoice overdue the day after its due date passes. The default due date is 30 days from the invoice send date. You can set a custom due date on any invoice before sending.
+The due date is calculated from the **net terms** on the invoice. The default is **net 14** (14 days from the invoice send date). You can change your default net terms in **Account** → **Invoicing Defaults**, and you can also set a custom due date on any individual invoice before sending.
+
+Clarely computes overdue status in real time — there's no overnight batch. An invoice shows as overdue as soon as its due date passes with a remaining balance.
 
 ## Finding overdue invoices
 
-Overdue invoices are flagged in your invoice list with an **Overdue** badge. You can filter your invoice list by status to see all overdue invoices at once.
+Overdue invoices are flagged in your invoice list. Filter by status to see all overdue invoices at once.
+
+## Late fee preview
+
+If you've configured a late fee in your invoicing settings, Clarely shows a late fee preview on overdue invoices. This is informational — the late fee is not automatically added to the invoice total or sent to the client. How you apply it is up to you.
 
 ## Following up
 
-To follow up on an overdue invoice, open it and tap **Resend**. Clarely resends the invoice email with the payment link. The email subject line indicates the invoice is overdue.
+Clarely can send automatic payment reminders before and after the due date. Configure reminder timing in **Account** → **Invoicing Defaults**. Reminders stop automatically once the invoice is paid.
 
-## Marking overdue invoices paid
+To follow up manually, open the invoice and tap **Resend** to send another email to the client with the payment link.
 
-If a client pays outside of Clarely (cash, check, bank transfer), mark the invoice paid manually. Open the invoice and tap **Mark as Paid**. Enter the payment method and date received.
+## Marking an overdue invoice paid
 
-## Writing off an invoice
-
-If an invoice won't be collected, you can mark it as **Written Off** to remove it from your active overdue list. This is for record-keeping only — it doesn't affect any payments or your Stripe account.
+If a client pays late (or pays outside Clarely), mark the invoice paid manually. Open the invoice and tap **Mark as Paid**. Enter the amount received. If they paid the full balance, the invoice moves to **Paid** status. If they paid partially, the remaining balance stays visible and the invoice remains in your active list.
 
 <Tip>
-  Staying on top of overdue invoices is easier when you check your invoice list at the end of each week. Set a recurring reminder in your calendar until it becomes habit.
+  Checking your invoice list at the end of each week is the easiest way to catch overdue invoices before they age too long. With payment reminders set up, Clarely handles most of the follow-up automatically.
 </Tip>

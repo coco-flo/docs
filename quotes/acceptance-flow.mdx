@@ -4,40 +4,50 @@ description: "What happens after a client accepts a quote."
 sidebarTitle: "Acceptance flow"
 ---
 
-When a client signs a quote, Clarely moves it to **Accepted** status and notifies you immediately. What happens next depends on the workflow type you selected when creating the quote.
+When a client signs a quote, Clarely moves it to **Accepted** status immediately. What happens next depends on the acceptance flow you chose when creating the quote.
 
 ## Field service flow
 
-For field service businesses (cleaning, trades, maintenance), acceptance triggers the job creation step:
+For field service businesses (cleaning, trades, maintenance), a job is **created automatically** the moment the client signs. You don't need to take any action to create it — it appears in your **Jobs** list ready to schedule.
 
 <Steps>
   <Step title="Quote accepted">
-    Client signs. You receive a notification. The quote status changes to Accepted.
+    Client signs. You receive a notification. The quote moves to Accepted and a job is automatically created from it.
   </Step>
-  <Step title="Convert to job">
-    Open the accepted quote and tap **Create Job**. The job inherits the quote details automatically.
+  <Step title="Schedule the job">
+    Open the job from your Jobs list. Set the date, time, and assign a team member if needed.
   </Step>
-  <Step title="Schedule and complete">
-    Schedule the job, assign team members if needed, and mark it complete when the work is done.
+  <Step title="Complete the job">
+    Mark the job completed when the work is done. If auto-invoice is enabled, a draft invoice is created automatically.
   </Step>
-  <Step title="Generate invoice">
-    From the completed job, tap **Generate Invoice**. The invoice pulls line items and pricing from the original signed quote.
+  <Step title="Send the invoice">
+    Review the draft invoice and tap **Send Invoice** when ready. The invoice goes to the client with your payment details.
   </Step>
 </Steps>
 
 ## Professional services flow
 
-For professional services work where the deliverable doesn't require a scheduled job:
+For work where no on-site job is needed — consulting, design work, or similar — an invoice is created and sent automatically when the client signs.
 
 <Steps>
   <Step title="Quote accepted">
-    Client signs. You receive a notification. The quote status changes to Accepted.
+    Client signs. An invoice is generated immediately from the accepted quote and sent to the client.
   </Step>
-  <Step title="Invoice immediately">
-    Clarely can generate an invoice directly from the accepted quote. Tap **Generate Invoice** from the quote.
+  <Step title="Collect payment">
+    The client receives the invoice by email and pays through your configured payment handles.
   </Step>
 </Steps>
 
+<Note>
+  In the professional services flow, the invoice is sent automatically on acceptance — there's no manual step required. Make sure your payment handles are configured in Business Settings before using this flow.
+</Note>
+
+## Which flow to use
+
+You set the acceptance flow when creating a quote. Field service is the default — it works for any trade or service business where work happens on-site before you invoice. Professional services is the right choice when you deliver work remotely or want to collect payment up front after signing.
+
+You can change the default for all new quotes in **Account** → **Invoicing Defaults**.
+
 ## Notifications
 
-You receive a push notification when a client signs. Make sure Clarely is installed on your home screen and notifications are enabled. See [Install on your phone](/getting-started/pwa-install).
+You receive a notification when a client signs. Make sure Clarely is installed on your home screen and notifications are enabled for the app. See [Install on your phone](/getting-started/pwa-install).
