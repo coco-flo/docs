@@ -12,23 +12,23 @@ Every invoice in Clarely has a status that tells you exactly where it stands.
 | --- | --- |
 | Draft | Created but not yet sent to the client |
 | Sent | Sent to client, awaiting payment |
-| Paid | Payment received and confirmed |
-| Overdue | Past due date, payment not received |
-| Written Off | Marked uncollectible — removed from active tracking |
+| Overdue | Past due date with a remaining balance (computed — not a manual status) |
+| Paid | Full balance received and recorded |
 
 ## How statuses update
 
-Most status changes happen automatically:
+**Draft → Sent** — when you tap **Send Invoice**
 
-- **Draft → Sent**: when you tap Send Invoice
-- **Sent → Paid**: when Stripe confirms payment, or when you tap Mark as Paid manually
-- **Sent → Overdue**: automatically the day after the due date passes
+**Sent → Overdue** — computed automatically when the due date passes with a balance remaining. Overdue is not a stored status — it's derived from the due date and balance. An invoice that's "overdue" is still technically in Sent status; the Overdue label is a display indicator.
 
-Manual status changes:
-
-- **Sent/Overdue → Paid**: tap Mark as Paid and enter payment details
-- **Any → Written Off**: tap Write Off on the invoice
+**Sent/Overdue → Paid** — when you tap **Mark as Paid** and the full balance is recorded
 
 ## Filtering by status
 
-In your invoice list, use the filter controls to view invoices by status. Filtering by **Overdue** shows everything that needs follow-up. Filtering by **Paid** shows your collected revenue.
+In your invoice list, use the filter controls to view invoices by status. Filtering by overdue shows everything that needs follow-up.
+
+## A note on payment
+
+Clarely doesn't process payments — clients pay you directly through Venmo, Cash App, or Zelle. Marking an invoice paid is a manual step you take after receiving the money. It's a record-keeping action, not a funds transfer.
+
+See [Payment handling](/invoices/payment-handling) for how payment recording works.

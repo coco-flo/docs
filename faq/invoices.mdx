@@ -6,28 +6,34 @@ sidebarTitle: "Invoices FAQ"
 
 **Can I change the line items on an invoice?**
 
-No. Invoice line items are pulled from the signed quote and cannot be changed. This preserves the integrity of the agreement. For additional work, create a new quote and invoice.
+Yes, while the invoice is in **Draft** status. Open it, make your edits, and save. Once sent, you can still edit some fields, but the core line items are drawn from the signed quote. For work that wasn't in the original quote, create a new quote for that additional scope.
 
 **What if my client wants to pay by cash or check?**
 
-Accept the payment and record it in Clarely manually. Open the invoice and tap **Mark as Paid**. Enter the payment method and date. This updates the invoice status without processing any funds through Stripe.
+Accept the payment and record it in Clarely manually. Open the invoice and tap **Mark as Paid**. Enter the payment method and date. This updates the invoice status for your records — no funds are processed through Clarely.
 
-**How long does it take to receive payment?**
+**How do clients pay?**
 
-Once your client pays online, Stripe typically deposits funds to your bank account within 2 business days. Your first payout may take longer during account verification.
+Clients pay you directly through Venmo, Cash App, Zelle, or any method you configure in your account settings. The invoice page shows your payment handles with tap-to-copy buttons. There's no card processing — payment happens outside Clarely.
+
+**When do I receive the money?**
+
+As soon as the client sends it through their payment app. Clarely is not in the payment flow, so there's no hold, processing delay, or fee. The money goes directly to your Venmo, Cash App, or Zelle account.
 
 **Can I send an invoice before completing the job?**
 
-For field service jobs, invoices are generated after the job is marked complete. For professional services quotes, you can invoice immediately on acceptance without a job step.
+For field service jobs, invoices are typically generated after the job is marked complete. For professional services quotes (using the "Send invoice immediately" acceptance flow), the invoice is sent automatically when the client signs — no job step required.
 
-**What if my client disputes a charge?**
+You can also create a manual invoice at any time from the Invoices section if you need to invoice outside of the standard workflow.
 
-The signed quote is your primary defense. It shows exactly what the client agreed to pay for, with their signature and timestamp. Provide the signed quote to Stripe as supporting documentation in any dispute.
+**What if my client disputes what was included?**
+
+The signed quote is your record. It shows exactly what the client agreed to, with their name and a timestamp. Open the quote and show them the line items they signed. Every line item, price, and total is permanently frozen at the moment of signing and cannot be changed.
 
 **Can I add a discount to an invoice?**
 
-Add discounts as a line item with a negative amount on the originating quote. Whatever is on the signed quote carries to the invoice.
+The cleanest way is to add a discount as a line item with a negative amount on the originating quote before sending it. Whatever is on the signed quote carries to the invoice.
 
-**What happens if a payment fails?**
+**Can I create an invoice without a quote?**
 
-Stripe notifies you and your client when a payment fails. The client can retry with a different card through the payment link. The invoice remains in Sent status until payment succeeds.
+Yes. Go to **Invoices** and tap **New Invoice** to create one manually. Select a client, add line items, and send.

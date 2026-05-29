@@ -1,0 +1,96 @@
+---
+title: "What your client experiences"
+description: "A step-by-step look at the client-side journey from quote to payment."
+sidebarTitle: "What your client experiences"
+---
+
+Clarely is a two-sided workflow. Understanding what your client sees at each step helps you set expectations, explain the process before you send anything, and avoid confusion when they open their first quote.
+
+## The quote email
+
+When you send a quote, your client receives an email from Clarely's sending domain. The email is intentionally simple:
+
+- Your business name in the subject and header
+- A short message indicating a quote is ready for review
+- A single button or link: **Review and sign your quote**
+
+The email does not include line items, totals, or any of the quote details. Everything is on the quote page itself. This is by design — the signing experience happens on the page, not in the email.
+
+<Tip>
+  Tell your client to expect an email from Clarely before you send the quote. Some clients don't recognize the sender name and miss it. A quick text — "I just sent you a quote through Clarely, check your email" — dramatically improves open rates.
+</Tip>
+
+## The quote page
+
+When your client taps the link, they land on a mobile-friendly quote page. They see:
+
+- Your business name and logo at the top
+- Every line item you added: description, quantity, and price
+- The subtotal, tax (if applicable), and grand total
+- Your contract terms (if you included them)
+- A deposit section if you configured one
+
+The page works on any device — phone, tablet, or desktop. Your client doesn't need a Clarely account. They don't download anything. The link opens directly in their browser.
+
+## How the client signs
+
+At the bottom of the quote page, the client sees a signature section. It has two parts:
+
+1. An agreement checkbox: "I agree to the terms and scope above"
+2. A name field: the client types their full name as their signature
+
+They check the box, type their name, and tap **Accept and Sign**. That's it. The entire process takes under a minute.
+
+At the moment they tap Accept, Clarely:
+
+- Locks the quote permanently (no further edits by anyone)
+- Records the signature with a timestamp
+- Creates a job (if you chose the field service flow) or sends an invoice (if you chose professional services)
+- Sends you a push notification
+
+## What the client sees after signing
+
+After signing, the client sees a confirmation screen: "You've accepted this quote. \[Your business name\] will be in touch to schedule the work." (Or a variation if you're using the professional services flow.)
+
+They don't receive a separate confirmation email at this point — their signed copy is accessible via the original quote link if they need to refer back to it.
+
+## The invoice email
+
+When you send an invoice (or when Clarely auto-sends one via the professional services flow), your client receives another email. Like the quote email, it's simple:
+
+- Your business name
+- The invoice total
+- A single link: **View invoice**
+
+The email does not include line items inline. Everything is on the invoice page.
+
+## The invoice page
+
+The client taps the link and sees:
+
+- Your business name and logo
+- The invoice total and balance due
+- Your payment handles: Venmo, Cash App, Zelle — whichever you've set up, with **tap-to-copy** buttons next to each
+- Any payment notes you've added (bank transfer details, preferences, etc.)
+
+There's no card entry form. Clarely doesn't process card payments. Your client copies your payment handle and sends the money directly to you through whichever app they use.
+
+## After the client pays
+
+Clarely doesn't know when your client pays — the transaction happens outside the app. Once you've received the money, you open the invoice and mark it paid. The invoice updates immediately and the client's link will reflect the paid status if they check it.
+
+## If a client wants to decline
+
+On the quote page, below the signature section, clients also have a **Decline** button. If they tap it, they can optionally leave a reason. The quote moves to Declined status in your app and any scheduled follow-up emails stop.
+
+---
+
+<CardGroup cols={2}>
+  <Card title="Send your first quote" icon="file-pen-line" href="/getting-started/your-first-quote">
+    The full owner-side walkthrough from account setup to getting paid.
+  </Card>
+
+  <Card title="Digital signature" icon="pen-line" href="/quotes/digital-signature">
+    How signatures work and why they're legally binding.
+  </Card>
+</CardGroup>

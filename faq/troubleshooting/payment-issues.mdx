@@ -1,40 +1,53 @@
 ---
 title: "Payment issues"
-description: "Resolve problems with payment collection."
+description: "Resolve common problems with payment collection and invoice status."
 sidebarTitle: "Payment issues"
 ---
 
-## Client says they paid but invoice still shows Sent
+## Client says they paid but the invoice still shows Sent
 
-Stripe processes payments in real time. If the invoice still shows Sent after your client says they paid:
+This is the most common scenario. Clarely doesn't automatically detect payments — payment happens between you and your client through Venmo, Cash App, Zelle, or whatever method they used. You need to mark the invoice paid manually.
 
-1. Check your Stripe dashboard for the transaction
-2. If the payment shows in Stripe, it may take a few minutes to sync to Clarely — refresh the invoice
-3. If the payment doesn't show in Stripe, the transaction may not have completed — ask the client to try again
+1. Open the invoice in Clarely
+2. Tap **Mark as Paid**
+3. Enter the amount received and the date
+4. Tap **Save**
 
-## Client's payment is failing
+If the client paid the full balance, the invoice moves to **Paid**. If they paid a partial amount, the remaining balance shows and the invoice stays in **Sent** status.
 
-Ask the client to:
+## Client can't figure out how to pay
 
-- Double-check their card number, expiry, and CVV
-- Make sure their billing address matches what's on file with their bank
-- Try a different card
-- Contact their bank — some banks block online transactions by default
+The invoice page shows your configured payment handles with tap-to-copy buttons. If a client is confused:
 
-If they continue to have trouble, they can contact their bank to authorize the transaction, then retry.
+- Make sure you have at least one payment handle configured in **Account → Settings → Business**. If none are set up, the invoice page won't show any payment options.
+- Confirm you're using the correct Venmo username, Cash App cashtag, or Zelle contact. A single typo means payments go to the wrong place or fail.
+- If the client prefers a method you haven't set up, add it in Business Settings and resend the invoice.
 
-## Payment processed but funds haven't arrived
+## Client paid the wrong amount
 
-Stripe's standard payout is 2 business days after payment. If it's been longer:
+Record the actual amount received. Open the invoice and tap **Mark as Paid**. Enter exactly what was received. The invoice will show the remaining balance. Follow up with the client for the difference, then record the additional payment when it arrives.
 
-1. Log in to your Stripe dashboard and check payout status
-2. Verify your bank account details in Stripe are correct
-3. Check if Stripe has flagged your account for review — new accounts sometimes have a longer initial hold
+## Invoice link shows "not valid or expired"
 
-## Invoice was paid twice
+This means the invoice's public link isn't resolving. A few things to check:
 
-Contact [support@clarely.co](mailto:support@clarely.co) immediately with the invoice number. We'll help coordinate with Stripe for a refund of the duplicate charge.
+1. Make sure the invoice was actually sent — it needs to be in **Sent** status. Open the invoice and check. If it's still in **Draft**, tap **Send Invoice**.
+2. If the invoice was sent correctly and the link still fails, contact [support@clarely.co](mailto:support@clarely.co) with the invoice number.
 
-## I need to refund a client
+## I need to issue a refund
 
-Refunds are issued through Stripe. Log in to your Stripe dashboard, find the payment, and issue a full or partial refund from there. The invoice status in Clarely doesn't update automatically for refunds — mark it manually if needed.
+Clarely doesn't process payments, so refunds happen through the same app the client used to pay.
+
+- **Venmo** — open the Venmo app and send them the refund amount
+- **Cash App** — open Cash App and send them the refund
+- **Zelle** — send a Zelle transfer back to their registered contact
+
+After issuing the refund outside Clarely, update the invoice manually to reflect the adjusted amount if needed.
+
+## Partial payment — how to track it
+
+Record each payment separately as it comes in. Each time you receive a payment, tap **Mark as Paid** on the invoice and enter the amount. Clarely tracks the running total and shows the remaining balance. The invoice stays in **Sent** status until the full balance is cleared.
+
+## Still stuck?
+
+Email [support@clarely.co](mailto:support@clarely.co) with your invoice number and a description of the issue.

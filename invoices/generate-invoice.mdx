@@ -4,46 +4,58 @@ description: "Create an invoice from a completed job or accepted quote."
 sidebarTitle: "Generate an invoice"
 ---
 
-Clarely generates invoices from the work you've already recorded — no manual entry required.
+Invoices in Clarely flow directly from the work you've recorded — the line items and pricing from the signed quote carry through automatically.
 
-## From a completed job
-
-<Steps>
-  <Step title="Open the completed job">
-    Go to **Jobs**, find the completed job, and open it.
-  </Step>
-  <Step title="Tap Generate Invoice">
-    Tap **Generate Invoice**. Clarely creates the invoice with line items and pricing pulled directly from the original signed quote.
-  </Step>
-  <Step title="Review">
-    Confirm the line items and total. Add any notes for the client if needed.
-  </Step>
-  <Step title="Send or save">
-    Tap **Send Invoice** to send immediately, or **Save as Draft** to send later.
-  </Step>
-</Steps>
-
-## From an accepted quote (professional services)
-
-For professional services work where no job is needed:
+## From a completed job (field service flow)
 
 <Steps>
-  <Step title="Open the accepted quote">
-    Go to **Quotes**, find the accepted quote.
+  <Step title="Complete the job">
+    Open the job and tap **Mark Complete**. After the 15-second undo window closes, the job is done.
   </Step>
-  <Step title="Tap Generate Invoice">
-    Tap **Generate Invoice** directly from the accepted quote.
+  <Step title="Invoice is created automatically (if auto-invoice is on)">
+    If you have auto-invoice enabled in **Account → Settings → Invoicing**, a draft invoice is created automatically. Find it in your **Invoices** list.
+
+    If auto-invoice is off, open the completed job and tap **Generate Invoice**.
   </Step>
   <Step title="Review and send">
-    Confirm and send.
+    Open the draft invoice. Confirm the line items and total. Tap **Send Invoice** when ready.
   </Step>
 </Steps>
 
-## What carries over automatically
+## From an accepted quote (professional services flow)
 
-- All line items from the signed quote
-- Descriptions, quantities, and pricing
+If you chose "Send invoice immediately" as the acceptance flow, Clarely handles this automatically. When your client signs the quote, an invoice is generated and emailed to them instantly. You don't need to take any action.
+
+The invoice appears in your **Invoices** list in **Sent** status.
+
+## Create a manual invoice
+
+You can create an invoice at any time without a quote.
+
+<Steps>
+  <Step title="Open Invoices">
+    Tap **Invoices**, then tap **New Invoice**.
+  </Step>
+  <Step title="Select a client">
+    Choose from your client list.
+  </Step>
+  <Step title="Add line items">
+    Add services or items with descriptions, quantities, and prices.
+  </Step>
+  <Step title="Set net terms">
+    Choose how many days until payment is due (net terms). The default comes from your invoicing settings.
+  </Step>
+  <Step title="Save or send">
+    Tap **Save as Draft** or **Send Invoice** to send immediately.
+  </Step>
+</Steps>
+
+## What carries over from a signed quote
+
+When an invoice is generated from a job linked to an accepted quote, the following come through automatically:
+
+- All line items with descriptions, quantities, and pricing
 - Client name and email
-- Tax (if configured in account settings)
+- Tax (if configured on the quote)
 
-You can edit a generated invoice while it's still in **Draft** status. Once sent, the invoice can still be edited, but the core line items are drawn from the signed quote. For any work that wasn't in the original quote, create a new quote for that additional scope.
+You can edit a draft invoice before sending. Once sent, the invoice can still be edited, but the scope of the work should reflect what was in the signed quote.

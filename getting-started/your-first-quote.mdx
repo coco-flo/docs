@@ -4,40 +4,105 @@ description: "Build a quote, get your client to sign, and move to paid."
 sidebarTitle: "Send your first quote"
 ---
 
-This walks you through sending your first quote end to end — from creating it to getting your client's signature.
+This is the complete path from a new Clarely account to your first paid invoice. Follow it once and the workflow will be second nature.
 
-## Before you start
+## Before you send anything
 
-Make sure you've added your business name in [Account Settings](/account/business-settings). It appears on every quote and invoice you send.
+Two things have to be in place before a quote is useful.
 
-## Create the quote
+**Your business name** appears on every quote and invoice your clients receive. Set it in **Account → Settings → Business** before sending anything. It's the first thing clients see.
 
-<Steps>
-  <Step title="Go to Quotes">
-    From the main menu, tap **Quotes**, then tap **New Quote**.
-  </Step>
-  <Step title="Add your client">
-    Enter your client's name and email address. The email is where Clarely sends the quote for signature.
-  </Step>
-  <Step title="Add line items">
-    Add each service or item with a description, quantity, and price. Be specific — this is the scope your client is signing. What's in the quote is what's covered.
-  </Step>
-  <Step title="Review and send">
-    Review the total, then tap **Send Quote**. Your client receives an email with a link to review and sign.
-  </Step>
-</Steps>
-
-## What your client sees
-
-Your client gets an email with a link to their quote. They review every line item, see the total, and sign digitally. Once they sign, the scope is locked — you both have a record of exactly what was agreed.
-
-## After the client signs
-
-You get a notification when the client signs. The quote moves to **Accepted** status. From there you can:
-
-- **Convert to a job** — schedule the work and track it to completion
-- **Invoice immediately** — for professional services work where no job step is needed
+**Your payment handles** are how your clients pay you. Without them, a client can open your invoice and have no idea how to send money. Add at least one — Venmo, Cash App, or Zelle — in **Account → Settings → Business** under the Payment section. This takes 30 seconds and matters more than anything else in your account settings.
 
 <Tip>
-  Install Clarely on your home screen so you see signature notifications the moment they come in. See [Install on your phone](/getting-started/pwa-install).
+  If your clients will mostly pay by Venmo, add that first. You can always add Cash App or Zelle later. Having at least one handle is what matters before your first invoice.
 </Tip>
+
+## Step 1 — Add your client
+
+Before creating a quote, you need a client record. Go to **Clients** and tap **New Client**.
+
+The only required fields are first name and email. The email is where Clarely sends the quote for signature, so get it right. Add a phone number if you have it — it shows up on the job for your team.
+
+Once a client is saved, they're available to select on any future quote. You don't re-enter their details each time.
+
+## Step 2 — Create the quote
+
+Go to **Quotes** and tap **New Quote**.
+
+**Select your client** from the list you just created.
+
+**Add line items.** Each item has three fields:
+
+- Description — be specific. "2-story home deep clean, 4 beds, 3 baths" is better than "cleaning." The description is exactly what your client signs, so precision protects you.
+- Quantity — how many units
+- Unit price — price per unit
+
+Add as many line items as the scope requires. The total calculates automatically.
+
+**Set tax** if your business charges it. You can set a default in your quoting settings so you don't have to enter it every time.
+
+**Choose an acceptance flow:**
+
+- **Schedule a job** — for field service work. When your client signs, a job is created automatically and you schedule it. Use this for cleaning, trades, maintenance, landscaping, anything done on-site.
+- **Send invoice immediately** — for professional services. When your client signs, an invoice is generated and sent to them automatically. No job step. Use this for consulting, design, remote work.
+
+If you're not sure, use "Schedule a job." It's the default and works for most service businesses.
+
+**Choose contract terms** if you want them. Standard or Enhanced terms add legal language to the quote your client signs.
+
+**Save the draft.** Tap **Save Draft**. The quote is saved but not sent yet. Review it.
+
+## Step 3 — Review and send
+
+Open the draft quote. Check that every line item is correct and the total looks right. Once your client signs, this is locked forever — there's no going back.
+
+When you're satisfied, tap **Send Quote**. Clarely sends your client an email from Clarely's sending domain with a link to their quote.
+
+That's it. You'll see the quote move to **Sent** status immediately.
+
+## Step 4 — Your client signs
+
+Your client opens the email, taps the link, and lands on the quote page. They can open this on any device — phone, tablet, or desktop. No Clarely account required.
+
+They see every line item, the total, and your contract terms. At the bottom is a signature section: they check a box confirming they agree, type their full name, and submit.
+
+The moment they submit, the quote moves to **Accepted** in your app and you receive a push notification (if you have Clarely installed on your home screen — see [Install on your phone](/getting-started/pwa-install)).
+
+<Note>
+  The instant a client signs, Clarely permanently freezes an exact copy of everything they agreed to — every line item, price, total, and term. This snapshot is stored and cannot be changed by anyone. It's your protection if a client ever disputes what was agreed.
+</Note>
+
+## Step 5 — After the signature (field service)
+
+If you chose "Schedule a job," a job was created automatically the moment your client signed. You don't need to do anything to create it — go to **Jobs** and it's already there in **Unscheduled** status.
+
+Open the job, set a date and time, assign a team member if needed, and save. The job moves to **Scheduled**.
+
+When the work is complete, open the job and tap **Mark Complete**. You have 15 seconds to undo if you tapped by mistake. After the window closes, the job is done.
+
+If you have auto-invoice enabled in your invoicing settings, a draft invoice is created automatically. Otherwise, open the completed job and tap **Generate Invoice**.
+
+## Step 5 — After the signature (professional services)
+
+If you chose "Send invoice immediately," Clarely already created and sent the invoice the moment your client signed. Your client received an email with a link to the invoice. You can check the invoice status in **Invoices** — it will show as **Sent**.
+
+## Step 6 — The invoice and getting paid
+
+Your client opens the invoice link and sees your total, balance due, and your payment handles (Venmo, Cash App, Zelle) with tap-to-copy buttons. They pay you directly through whichever method works for them.
+
+Once you've received the payment, open the invoice in Clarely, tap **Mark as Paid**, and enter the amount. When the balance hits zero, the invoice moves to **Paid**.
+
+That's the complete loop: quote → signature → job → invoice → paid.
+
+---
+
+<CardGroup cols={2}>
+  <Card title="What your client experiences" icon="user" href="/getting-started/client-experience">
+    See the full client-side view — what they receive and how they sign.
+  </Card>
+
+  <Card title="Set up your account" icon="settings" href="/getting-started/setup-checklist">
+    The full account setup checklist before going live.
+  </Card>
+</CardGroup>
