@@ -57,11 +57,14 @@
             "pages": ["index"]
           },
           {
-            "group": "How Clarely works",
+            "group": "Start here",
             "pages": [
               "getting-started/how-clarely-works",
+              "getting-started/setup-checklist",
               "getting-started/pwa-install",
-              "getting-started/your-first-quote"
+              "getting-started/your-first-quote",
+              "getting-started/client-experience",
+              "getting-started/for-your-team"
             ]
           }
         ]
@@ -174,7 +177,10 @@
             "pages": [
               "faq/troubleshooting/client-cant-sign",
               "faq/troubleshooting/payment-issues",
-              "faq/troubleshooting/pwa-install"
+              "faq/troubleshooting/pwa-install",
+              "faq/troubleshooting/quote-email-not-received",
+              "faq/troubleshooting/team-member-cant-sign-in",
+              "faq/troubleshooting/cant-edit-sent-quote"
             ]
           }
         ]
